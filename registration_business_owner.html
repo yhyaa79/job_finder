@@ -2,300 +2,348 @@
 <html lang="fa" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت‌نام صاحبان ایده و کسب‌وکار</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <style>
+    </style>
 </head>
 
 <body>
-    <div id="business-owner-form">
-        <h2>ثبت‌نام صاحبان ایده یا کسب‌وکار</h2>
 
-        <h4>اطلاعات کسب کار</h4>
+    <div class="container">
+        <div class="header">
+            <h1>ثبت‌نام صاحبان ایده یا کسب‌وکار</h1>
+            <p>اطلاعات خود را با دقت وارد کنید</p>
+        </div>
 
-        <label for="system-type">نوع سیستم (نوع سازمان یا ساختار):</label>
-        <select id="system-type" name="system-type">
-            <option value="">انتخاب کنید</option>
-            <option value="corporate">شرکتی (Corporate/Company)</option>
-            <option value="team-based">تیمی (Team-based)</option>
-            <option value="workshop">کارگاهی (Workshop/Factory)</option>
-            <option value="startup">استارتاپی (Startup)</option>
-            <option value="non-profit">غیرانتفاعی (Non-profit)</option>
-            <option value="freelance">فریلنسری (Freelance)</option>
-            <option value="cooperative">تعاونی (Cooperative)</option>
-            <option value="family-business">خانوادگی (Family Business)</option>
-            <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
-            <option value="project-based">پروژه‌ای (Project-based)</option>
-            <option value="partnership">مشارکتی (Partnership)</option>
-            <option value="government-linked">دولتی (Government-linked)</option>
-            <option value="private">خصوصی (Private)</option>
-            <option value="hybrid">هیبریدی (Hybrid)</option>
-        </select><br><br>
+        <div class="content">
 
-        <label for="team-size">اندازه تیم:</label>
-        <select id="team-size" name="team-size">
-            <option value="">انتخاب کنید</option>
-            <option value="small">کوچک (2-5 نفر) (Small: 2-5 members)</option>
-            <option value="medium">متوسط (6-10 نفر) (Medium: 6-10 members)</option>
-            <option value="large">بزرگ (بیش از 10 نفر) (Large: More than 10 members)</option>
-            <option value="solo">تک‌نفره (Solo)</option>
-            <option value="unlimited">نامحدود (Unlimited)</option>
-        </select><br><br>
+            <form id="business-form">
 
-        <label for="main-industry">دسته‌بندی اصلی صنایع / حوزه‌های فعالیت:</label>
-        <select id="main-industry" name="main-industry">
-            <option value="it-software">فناوری اطلاعات و نرم‌افزار (IT & Software)</option>
-            <option value="e-commerce">تجارت الکترونیک و فروشگاه آنلاین (E-commerce)</option>
-            <option value="fintech">فین‌تک و خدمات مالی (FinTech & Financial Services)</option>
-            <option value="healthtech">سلامت، پزشکی و بهداشت (HealthTech & Medical)</option>
-            <option value="edtech">آموزش و یادگیری آنلاین (EdTech)</option>
-            <option value="foodtech">غذا، رستوران و تحویل (FoodTech & Delivery)</option>
-            <option value="mobility">حمل‌ونقل و لجستیک (Mobility & Logistics)</option>
-            <option value="agritech">کشاورزی و دامداری هوشمند (AgriTech)</option>
-            <option value="cleantech">انرژی، محیط زیست و پایداری (CleanTech & Sustainability)</option>
-            <option value="tourism">گردشگری و سفر (Tourism & Travel)</option>
-            <option value="real-estate">املاک و مستغلات (Real Estate & PropTech)</option>
-            <option value="manufacturing">تولید و صنایع دستی (Manufacturing & Handicrafts)</option>
-            <option value="media">رسانه، محتوا و سرگرمی (Media, Content & Entertainment)</option>
-            <option value="beauty">زیبایی، آرایش و مراقبت شخصی (Beauty & Personal Care)</option>
-            <option value="sports">ورزش، تناسب اندام و سبک زندگی (Sports & Fitness)</option>
-            <option value="automotive">خودرو و قطعات یدکی (Automotive)</option>
-            <option value="construction">ساخت‌وساز و تجهیزات ساختمانی (Construction & Building)</option>
-            <option value="fashion">نساجی، مد و پوشاک (Fashion & Textile)</option>
-            <option value="petrochemical">پتروشیمی، شیمیایی و مواد اولیه (Petrochemical & Chemicals)</option>
-            <option value="metals">فلزات، معدن و فولاد (Metals, Mining & Steel)</option>
-            <option value="vocational">آموزش و پرورش غیررسمی / مهارتی (Vocational Training)</option>
-        </select><br><br>
+                <fieldset>
+                    <legend>اطلاعات اصلی کسب‌وکار</legend>
 
-        <label for="business-model">مدل کسب‌وکار:</label>
-        <select id="business-model" name="business-model">
-            <option value="">انتخاب کنید</option>
-            <option value="marketplace">پلتفرم / مارکت‌پلیس (Marketplace)</option>
-            <option value="saas">اشتراکی / SaaS (Subscription / Software as a Service)</option>
-            <option value="freemium">فریمیوم (Freemium)</option>
-            <option value="commission-based">کمیسیون‌محور (Commission-based)</option>
-            <option value="direct-sales">فروش مستقیم محصول (Direct Product Sales)</option>
-            <option value="service-based">خدمات آنلاین / آفلاین (Service-based)</option>
-            <option value="content-subscription">اشتراک محتوا (Content Subscription)</option>
-            <option value="ad-based">تبلیغات و اسپانسرشیپ (Ad-based)</option>
-            <option value="sharing-economy">مدل اشتراکی تجهیزات / فضا (Sharing Economy)</option>
-            <option value="on-demand">تولید به سفارش (On-demand Production)</option>
-            <option value="crowdfunding">کراودفاندینگ / سرمایه‌گذاری جمعی (Crowdfunding)</option>
-        </select><br><br>
+                    <div class="filling-form">
+                        <div class="form-group">
+                            <label for="system-type">نوع سیستم / ساختار سازمانی</label>
+                            <select id="system-type" name="system-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="corporate">شرکتی (Corporate/Company)</option>
+                                <option value="team-based">تیمی (Team-based)</option>
+                                <option value="workshop">کارگاهی (Workshop/Factory)</option>
+                                <option value="startup">استارتاپی (Startup)</option>
+                                <option value="non-profit">غیرانتفاعی (Non-profit)</option>
+                                <option value="freelance">فریلنسری (Freelance)</option>
+                                <option value="cooperative">تعاونی (Cooperative)</option>
+                                <option value="family-business">خانوادگی (Family Business)</option>
+                                <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
+                                <option value="project-based">پروژه‌ای (Project-based)</option>
+                                <option value="partnership">مشارکتی (Partnership)</option>
+                                <option value="government-linked">دولتی (Government-linked)</option>
+                                <option value="private">خصوصی (Private)</option>
+                                <option value="hybrid">هیبریدی (Hybrid)</option>
+                            </select>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="team-size">اندازه تیم:</label>
+                            <select id="team-size" name="team-size">
+                                <option value="">انتخاب کنید</option>
+                                <option value="small">کوچک (2-5 نفر) (Small: 2-5 members)</option>
+                                <option value="medium">متوسط (6-10 نفر) (Medium: 6-10 members)</option>
+                                <option value="large">بزرگ (بیش از 10 نفر) (Large: More than 10 members)</option>
+                                <option value="solo">تک‌نفره (Solo)</option>
+                                <option value="unlimited">نامحدود (Unlimited)</option>
+                            </select>
+                        </div>
 
-        <label for="startup-stage">مرحله رشد / نوع استارتاپ:</label>
-        <select id="startup-stage" name="startup-stage">
-            <option value="">انتخاب کنید</option>
-            <option value="pre-seed">ایده اولیه / پیش‌استارتاپ (Idea / Pre-seed)</option>
-            <option value="mvp">MVP / محصول اولیه (MVP / Early Stage)</option>
-            <option value="growth">در حال رشد سریع (Growth Stage)</option>
-            <option value="scalable">مقیاس‌پذیر بالا (Scalable / High-growth)</option>
-            <option value="small-local">کسب‌وکار کوچک محلی (Small Local Business)</option>
-            <option value="social-impact">استارتاپ اجتماعی / تأثیرگذار (Social Impact Startup)</option>
-            <option value="lifestyle">استارتاپ خریدنی / کوچک (Buyable / Lifestyle Startup)</option>
-        </select><br><br>
+                        <div class="form-group">
+                            <label for="main-industry">دسته‌بندی اصلی صنایع / حوزه‌های فعالیت:</label>
+                            <select id="main-industry" name="main-industry">
+                                <option value="">انتخاب کنید</option>
+                                <option value="it-software">فناوری اطلاعات و نرم‌افزار (IT & Software)</option>
+                                <option value="e-commerce">تجارت الکترونیک و فروشگاه آنلاین (E-commerce)</option>
+                                <option value="fintech">فین‌تک و خدمات مالی (FinTech & Financial Services)</option>
+                                <option value="healthtech">سلامت، پزشکی و بهداشت (HealthTech & Medical)</option>
+                                <option value="edtech">آموزش و یادگیری آنلاین (EdTech)</option>
+                                <option value="foodtech">غذا، رستوران و تحویل (FoodTech & Delivery)</option>
+                                <option value="mobility">حمل‌ونقل و لجستیک (Mobility & Logistics)</option>
+                                <option value="agritech">کشاورزی و دامداری هوشمند (AgriTech)</option>
+                                <option value="cleantech">انرژی، محیط زیست و پایداری (CleanTech & Sustainability)
+                                </option>
+                                <option value="tourism">گردشگری و سفر (Tourism & Travel)</option>
+                                <option value="real-estate">املاک و مستغلات (Real Estate & PropTech)</option>
+                                <option value="manufacturing">تولید و صنایع دستی (Manufacturing & Handicrafts)</option>
+                                <option value="media">رسانه، محتوا و سرگرمی (Media, Content & Entertainment)</option>
+                                <option value="beauty">زیبایی، آرایش و مراقبت شخصی (Beauty & Personal Care)</option>
+                                <option value="sports">ورزش، تناسب اندام و سبک زندگی (Sports & Fitness)</option>
+                                <option value="automotive">خودرو و قطعات یدکی (Automotive)</option>
+                                <option value="construction">ساخت‌وساز و تجهیزات ساختمانی (Construction & Building)
+                                </option>
+                                <option value="fashion">نساجی، مد و پوشاک (Fashion & Textile)</option>
+                                <option value="petrochemical">پتروشیمی، شیمیایی و مواد اولیه (Petrochemical & Chemicals)
+                                </option>
+                                <option value="metals">فلزات، معدن و فولاد (Metals, Mining & Steel)</option>
+                                <option value="vocational">آموزش و پرورش غیررسمی / مهارتی (Vocational Training)</option>
+                            </select>
+                        </div>
 
-        <label for="product-type">نوع محصول / خدمت:</label>
-        <select id="product-type" name="product-type">
-            <option value="">انتخاب کنید</option>
-            <option value="mobile-app">اپلیکیشن موبایل (Mobile App)</option>
-            <option value="web-platform">وب‌سایت / پلتفرم آنلاین (Web Platform)</option>
-            <option value="hardware-software">سخت‌افزار + نرم‌افزار (Hardware + Software)</option>
-            <option value="offline-service">خدمات فیزیکی / حضوری (Offline / Physical Service)</option>
-            <option value="digital-content">محتوای دیجیتال (Digital Content)</option>
-            <option value="physical-product">محصول فیزیکی (Physical Product)</option>
-            <option value="consulting">خدمات مشاوره‌ای / منتورینگ (Consulting / Mentoring)</option>
-            <option value="ai-tools">ابزارهای هوش مصنوعی / اتوماسیون (AI Tools)</option>
-            <option value="cloud-services">خدمات ابری / کلود (Cloud Services)</option>
-        </select><br><br>
+                        <div class="form-group">
+                            <label for="business-model">مدل کسب‌وکار:</label>
+                            <select id="business-model" name="business-model">
+                                <option value="">انتخاب کنید</option>
+                                <option value="marketplace">پلتفرم / مارکت‌پلیس (Marketplace)</option>
+                                <option value="saas">اشتراکی / SaaS (Subscription / Software as a Service)</option>
+                                <option value="freemium">فریمیوم (Freemium)</option>
+                                <option value="commission-based">کمیسیون‌محور (Commission-based)</option>
+                                <option value="direct-sales">فروش مستقیم محصول (Direct Product Sales)</option>
+                                <option value="service-based">خدمات آنلاین / آفلاین (Service-based)</option>
+                                <option value="content-subscription">اشتراک محتوا (Content Subscription)</option>
+                                <option value="ad-based">تبلیغات و اسپانسرشیپ (Ad-based)</option>
+                                <option value="sharing-economy">مدل اشتراکی تجهیزات / فضا (Sharing Economy)</option>
+                                <option value="on-demand">تولید به سفارش (On-demand Production)</option>
+                                <option value="crowdfunding">کراودفاندینگ / سرمایه‌گذاری جمعی (Crowdfunding)</option>
+                            </select>
+                        </div>
 
-        <label for="market-focus">تمرکز جغرافیایی / بازار هدف:</label>
-        <select id="market-focus" name="market-focus">
-            <option value="">انتخاب کنید</option>
-            <option value="local">محلی / شهری (Local / City-based)</option>
-            <option value="provincial">استانی / منطقه‌ای (Provincial)</option>
-            <option value="national">سراسری ایران (National)</option>
-            <option value="diaspora">فارسی‌زبانان خارج از کشور (Persian-speaking Diaspora)</option>
-            <option value="export">صادرات‌محور (Export-oriented)</option>
-            <option value="global">بین‌المللی (Global)</option>
-        </select><br><br>
+                        <div class="form-group">
+                            <label for="startup-stage">مرحله رشد / نوع استارتاپ:</label>
+                            <select id="startup-stage" name="startup-stage">
+                                <option value="">انتخاب کنید</option>
+                                <option value="pre-seed">ایده اولیه / پیش‌استارتاپ (Idea / Pre-seed)</option>
+                                <option value="mvp">MVP / محصول اولیه (MVP / Early Stage)</option>
+                                <option value="growth">در حال رشد سریع (Growth Stage)</option>
+                                <option value="scalable">مقیاس‌پذیر بالا (Scalable / High-growth)</option>
+                                <option value="small-local">کسب‌وکار کوچک محلی (Small Local Business)</option>
+                                <option value="social-impact">استارتاپ اجتماعی / تأثیرگذار (Social Impact Startup)
+                                </option>
+                                <option value="lifestyle">استارتاپ خریدنی / کوچک (Buyable / Lifestyle Startup)</option>
+                            </select>
+                        </div>
 
-        <label for="problem-solved">نیاز / مشکل حل‌شده:</label>
-        <select id="problem-solved" name="problem-solved">
-            <option value="time-saving">صرفه‌جویی در زمان (Time-saving)</option>
-            <option value="cost-reduction">کاهش هزینه (Cost Reduction)</option>
-            <option value="accessibility">دسترسی آسان‌تر (Accessibility)</option>
-            <option value="quality-of-life">بهبود کیفیت زندگی (Quality of Life)</option>
-            <option value="environmental">حل مشکل زیست‌محیطی (Environmental Solution)</option>
-            <option value="side-income">ایجاد درآمد جانبی (Side Income)</option>
-            <option value="skill-development">آموزش و مهارت‌افزایی (Skill Development)</option>
-            <option value="health-wellness">سلامت جسمی / روانی (Health & Wellness)</option>
-            <option value="security-trust">امنیت و اعتماد (Security & Trust)</option>
-        </select><br><br>
+                        <div class="form-group">
+                            <label for="product-type">نوع محصول / خدمت:</label>
+                            <select id="product-type" name="product-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="mobile-app">اپلیکیشن موبایل (Mobile App)</option>
+                                <option value="web-platform">وب‌سایت / پلتفرم آنلاین (Web Platform)</option>
+                                <option value="hardware-software">سخت‌افزار + نرم‌افزار (Hardware + Software)</option>
+                                <option value="offline-service">خدمات فیزیکی / حضوری (Offline / Physical Service)
+                                </option>
+                                <option value="digital-content">محتوای دیجیتال (Digital Content)</option>
+                                <option value="physical-product">محصول فیزیکی (Physical Product)</option>
+                                <option value="consulting">خدمات مشاوره‌ای / منتورینگ (Consulting / Mentoring)</option>
+                                <option value="ai-tools">ابزارهای هوش مصنوعی / اتوماسیون (AI Tools)</option>
+                                <option value="cloud-services">خدمات ابری / کلود (Cloud Services)</option>
+                            </select>
+                        </div>
 
-        <label for="core-technology">نوآوری / فناوری اصلی:</label>
-        <select id="core-technology" name="core-technology">
-            <option value="">انتخاب کنید</option>
-            <option value="ai-ml">هوش مصنوعی و یادگیری ماشین (AI / ML)</option>
-            <option value="blockchain">بلاکچین و کریپتو (Blockchain / Crypto)</option>
-            <option value="iot">اینترنت اشیاء (IoT)</option>
-            <option value="ar-vr">واقعیت افزوده / مجازی (AR / VR)</option>
-            <option value="big-data">بیگ‌دیتا و آنالیتیکس (Big Data & Analytics)</option>
-            <option value="non-tech">بدون فناوری پیشرفته (Non-tech / Traditional)</option>
-            <option value="robotics">رباتیک و اتوماسیون (Robotics)</option>
-        </select><br><br>
+                        <div class="form-group">
+                            <label for="market-focus">تمرکز جغرافیایی / بازار هدف:</label>
+                            <select id="market-focus" name="market-focus">
+                                <option value="">انتخاب کنید</option>
+                                <option value="local">محلی / شهری (Local / City-based)</option>
+                                <option value="provincial">استانی / منطقه‌ای (Provincial)</option>
+                                <option value="national">سراسری ایران (National)</option>
+                                <option value="diaspora">فارسی‌زبانان خارج از کشور (Persian-speaking Diaspora)</option>
+                                <option value="export">صادرات‌محور (Export-oriented)</option>
+                                <option value="global">بین‌المللی (Global)</option>
+                            </select>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="problem-solved">نیاز / مشکل حل‌شده:</label>
+                            <select id="problem-solved" name="problem-solved">
+                                <option value="">انتخاب کنید</option>
+                                <option value="time-saving">صرفه‌جویی در زمان (Time-saving)</option>
+                                <option value="cost-reduction">کاهش هزینه (Cost Reduction)</option>
+                                <option value="accessibility">دسترسی آسان‌تر (Accessibility)</option>
+                                <option value="quality-of-life">بهبود کیفیت زندگی (Quality of Life)</option>
+                                <option value="environmental">حل مشکل زیست‌محیطی (Environmental Solution)</option>
+                                <option value="side-income">ایجاد درآمد جانبی (Side Income)</option>
+                                <option value="skill-development">آموزش و مهارت‌افزایی (Skill Development)</option>
+                                <option value="health-wellness">سلامت جسمی / روانی (Health & Wellness)</option>
+                                <option value="security-trust">امنیت و اعتماد (Security & Trust)</option>
+                            </select>
+                        </div>
 
-        <label for="contract-type">نوع قرارداد:</label>
-        <select id="contract-type" name="contract-type">
-            <option value="">انتخاب کنید</option>
-            <option value="full-time">تمام‌وقت (Full-time)</option>
-            <option value="part-time">پاره‌وقت (Part-time)</option>
-            <option value="contractual">قراردادی (Contractual)</option>
-            <option value="freelance">فریلنس (Freelance)</option>
-            <option value="partnership">مشارکتی (Partnership)</option>
-            <option value="probationary">آزمایشی (Probationary)</option>
-            <option value="permanent">دائمی (Permanent)</option>
-        </select><br><br>
-
-
-        <h4>اطلاعات نیرو کار</h4>
-
-
-        <label for="skills">مهارت‌ها:</label>
-        <select id="skills" name="skills">
-            <option value="">انتخاب کنید</option>
-            <option value="programming">برنامه‌نویسی (Programming)</option>
-            <option value="graphic-design">طراح گرافیک (Graphic Design)</option>
-            <option value="project-management">مدیریت پروژه (Project Management)</option>
-            <option value="digital-marketing">بازاریابی دیجیتال (Digital Marketing)</option>
-            <option value="data-analysis">تحلیل داده (Data Analysis)</option>
-            <option value="sales">فروش (Sales)</option>
-            <option value="accounting">حسابداری (Accounting)</option>
-            <option value="software-engineering">مهندسی نرم‌افزار (Software Engineering)</option>
-            <option value="seo">سئو و بهینه‌سازی (SEO)</option>
-            <option value="web-design">طراحی وب (Web Design)</option>
-            <option value="social-media-management">مدیریت شبکه‌های اجتماعی (Social Media Management)</option>
-            <option value="app-development">توسعه اپلیکیشن (App Development)</option>
-            <option value="rnd">تحقیق و توسعه (R&D)</option>
-            <option value="hr-management">مدیریت منابع انسانی (HR Management)</option>
-            <option value="photography">عکاسی و فیلم‌برداری (Photography/Videography)</option>
-            <option value="writing">نویسندگی (Writing)</option>
-            <option value="translation">ترجمه (Translation)</option>
-            <option value="mechanical-engineering">مهندسی مکانیک (Mechanical Engineering)</option>
-            <option value="supply-chain-management">مدیریت زنجیره تأمین (Supply Chain Management)</option>
-        </select><br><br>
-
-        <label for="experience-level">سطح تجربه:</label>
-        <select id="experience-level" name="experience-level">
-            <option value="">انتخاب کنید</option>
-            <option value="beginner">تازه‌کار (Beginner)</option>
-            <option value="intermediate">متوسط (Intermediate)</option>
-            <option value="professional">حرفه‌ای (Professional)</option>
-            <option value="expert">متخصص (Expert)</option>
-            <option value="no-experience">بدون تجربه (No Experience)</option>
-        </select><br><br>
+                        <div class="form-group">
+                            <label for="core-technology">نوآوری / فناوری اصلی:</label>
+                            <select id="core-technology" name="core-technology">
+                                <option value="">انتخاب کنید</option>
+                                <option value="ai-ml">هوش مصنوعی و یادگیری ماشین (AI / ML)</option>
+                                <option value="blockchain">بلاکچین و کریپتو (Blockchain / Crypto)</option>
+                                <option value="iot">اینترنت اشیاء (IoT)</option>
+                                <option value="ar-vr">واقعیت افزوده / مجازی (AR / VR)</option>
+                                <option value="big-data">بیگ‌دیتا و آنالیتیکس (Big Data & Analytics)</option>
+                                <option value="non-tech">بدون فناوری پیشرفته (Non-tech / Traditional)</option>
+                                <option value="robotics">رباتیک و اتوماسیون (Robotics)</option>
+                            </select>
+                        </div>
 
 
-        <label for="languages">زبان‌ها:</label>
-        <select id="languages" name="languages">
-            <option value="persian">فارسی (Persian)</option>
-            <option value="english">انگلیسی (English)</option>
-            <option value="arabic">عربی (Arabic)</option>
-            <option value="turkish">ترکی (Turkish)</option>
-            <option value="french">فرانسوی (French)</option>
-            <option value="german">آلمانی (German)</option>
-            <option value="multilingual">چندزبانه (Multilingual)</option>
-        </select><br><br>
+                        <div class="form-group">
+                            <label for="contract-type">نوع قرارداد:</label>
+                            <select id="contract-type" name="contract-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="full-time">تمام‌وقت (Full-time)</option>
+                                <option value="part-time">پاره‌وقت (Part-time)</option>
+                                <option value="contractual">قراردادی (Contractual)</option>
+                                <option value="freelance">فریلنس (Freelance)</option>
+                                <option value="partnership">مشارکتی (Partnership)</option>
+                                <option value="probationary">آزمایشی (Probationary)</option>
+                                <option value="permanent">دائمی (Permanent)</option>
+                            </select>
+                        </div>
 
-        <label for="location">مکان (جغرافیایی):</label>
-        <select id="location" name="location">
-            <option value="">انتخاب کنید</option>
-            <option value="tehran">تهران (Tehran)</option>
-            <option value="isfahan">اصفهان (Isfahan)</option>
-            <option value="mashhad">مشهد (Mashhad)</option>
-            <option value="shiraz">شیراز (Shiraz)</option>
-            <option value="tabriz">تبریز (Tabriz)</option>
-            <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
-            <option value="rural">روستایی (Rural)</option>
-            <option value="urban">شهری (Urban)</option>
-            <option value="international">بین‌المللی (International)</option>
-            <option value="provincial">استانی (Provincial, e.g., Khorasan, Fars)</option>
-            <option value="regional">منطقه‌ای (Regional, e.g., North, South)</option>
-            <option value="abroad">خارج از کشور (Abroad)</option>
-        </select><br><br>
+                        <div class="form-group">
+                            <label for="contract-type">نام پروژه:</label>
+                            <textarea class="input-project-name"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contract-type">توضیحات پروژه:</label>
+                            <textarea class="input-project-description"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            
+                        </div>
+
+                    </div>
+                </fieldset>
 
 
-        <h4>اطلاعات سرمایه مورد نیاز</h4>
+                <!-- بخش اختیاری نیروی کار -->
+                <div class="optional-section">
+                    <div class="toggle-header">
+                        <input type="checkbox" id="need-team" />
+                        <label for="need-team">به نیروی انسانی (کارمند / همکار) نیاز دارم</label>
+                    </div>
 
-        <label for="investment-type">نوع سرمایه‌گذاری:</label>
-        <select id="investment-type" name="investment-type">
-            <option value="equity">سهام (Equity Investment)</option>
-            <option value="loan">وام (Loan)</option>
-            <option value="grant">کمک بلاعوض (Grant)</option>
-            <option value="angel">سرمایه‌گذاری فرشته (Angel Investment)</option>
-            <option value="crowdfunding">سرمایه‌گذاری جمعی (Crowdfunding)</option>
-            <option value="venture-capital">سرمایه‌گذاری خطرپذیر (Venture Capital)</option>
-            <option value="micro-investment">سرمایه‌گذاری خرد (Micro-investment)</option>
-            <option value="strategic">سرمایه‌گذاری استراتژیک (Strategic Investment)</option>
-        </select><br><br>
+                    <div class="section-content" id="team-section">
+                        <div class="form-group">
+                            <label for="skills">مهارت اصلی مورد نیاز</label>
+                            <select id="skills" name="skills">
+                                <option value="">انتخاب کنید</option>
+                                <option value="programming">برنامه‌نویسی</option>
+                                <option value="ui-ux">طراحی رابط و تجربه کاربری</option>
+                                <!-- بقیه مهارت‌ها -->
+                            </select>
+                        </div>
 
-        <h4>اطلاعات تجهیزات مورد نیاز</h4>
+                        <div class="form-group">
+                            <label for="experience-level">سطح تجربه مورد انتظار</label>
+                            <select id="experience-level" name="experience-level">
+                                <option value="beginner">تازه‌کار</option>
+                                <option value="intermediate">متوسط</option>
+                                <option value="professional">حرفه‌ای</option>
+                                <option value="expert">متخصص</option>
+                            </select>
+                        </div>
 
-        <label for="equipment-type">دسته‌بندی تجهیزات (برای اجاره یا فروش):</label>
-        <select id="equipment-type" name="equipment-type">
-            <option value="industrial-machinery">ماشین‌آلات صنعتی (Industrial Machinery)</option>
-            <option value="electronic-devices">دستگاه‌های الکترونیکی (Electronic Devices)</option>
-            <option value="office-equipment">وسایل اداری (Office Equipment)</option>
-            <option value="agriculture">کشاورزی (Agriculture)</option>
-            <option value="education">آموزش (Education)</option>
-            <option value="health-medical">سلامت و پزشکی (Health/Medical)</option>
-            <option value="e-commerce">تجارت الکترونیک (E-commerce)</option>
-            <option value="software">نرم‌افزارها (Software)</option>
-            <option value="workspace">فضای کاری (Workspace/Office Space)</option>
-            <option value="transportation-vehicles">وسایل حمل‌ونقل (Transportation Vehicles)</option>
-            <option value="medical-equipment">تجهیزات پزشکی (Medical Equipment)</option>
-            <option value="agricultural-tools">دستگاه‌های کشاورزی (Agricultural Tools)</option>
-            <option value="construction">ساخت‌وساز (Construction)</option>
-            <option value="retail">خرده‌فروشی (Retail)</option>
-            <option value="sports-fitness">ورزش و تناسب اندام (Sports/Fitness)</option>
-            <option value="art-design">هنر و طراحی (Art/Design)</option>
-            <option value="food-beverage">غذا و نوشیدنی (Food/Beverage)</option>
-            <option value="legal">حقوقی (Legal)</option>
-            <option value="real-estate">املاک (Real Estate)</option>
-            <option value="kitchen-appliances">وسایل آشپزخانه (Kitchen Appliances, e.g., دستگاه آبمیوه‌گیری)</option>
-            <option value="computers">کامپیوتر و لپ‌تاپ (Computers/Laptops)</option>
-            <option value="printers">پرینتر و اسکنر (Printers/Scanners)</option>
-        </select><br><br>
+                        <!-- فیلدهای بیشتر مانند زبان، مکان، نوع قرارداد و ... -->
 
-        <label for="equipment-location">مکان (جغرافیایی):</label>
-        <select id="equipment-location" name="equipment-location">
-            <option value="">انتخاب کنید</option>
-            <option value="tehran">تهران (Tehran)</option>
-            <option value="isfahan">اصفهان (Isfahan)</option>
-            <option value="mashhad">مشهد (Mashhad)</option>
-            <option value="shiraz">شیراز (Shiraz)</option>
-            <option value="tabriz">تبریز (Tabriz)</option>
-            <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
-            <option value="rural">روستایی (Rural)</option>
-            <option value="urban">شهری (Urban)</option>
-            <option value="international">بین‌المللی (International)</option>
-            <option value="provincial">استانی (Provincial, e.g., Khorasan, Fars)</option>
-            <option value="regional">منطقه‌ای (Regional, e.g., North, South)</option>
-            <option value="abroad">خارج از کشور (Abroad)</option>
-        </select><br><br>
+                    </div>
+                </div>
 
-        <label for="equipment-contract">نوع قرارداد (اجاره یا فروش):</label>
-        <select id="equipment-contract" name="equipment-contract">
-            <option value="">انتخاب کنید</option>
-            <option value="rental">اجاره (Rental)</option>
-            <option value="sale">فروش (Sale)</option>
-            <option value="lease">لیزینگ (Lease)</option> <!-- اضافه شده برای کامل‌تر شدن -->
-            <option value="subscription">اشتراکی (Subscription)</option> <!-- اضافه شده -->
-        </select><br><br>
 
+                <!-- بخش اختیاری سرمایه -->
+                <div class="optional-section">
+                    <div class="toggle-header">
+                        <input type="checkbox" id="need-funding" />
+                        <label for="need-funding">به جذب سرمایه / مشارکت مالی نیاز دارم</label>
+                    </div>
+
+                    <div class="section-content" id="funding-section">
+                        <div class="form-group">
+                            <label for="investment-type">نوع سرمایه‌گذاری مورد نظر</label>
+                            <select id="investment-type" name="investment-type">
+                                <option value="equity">سهام / مشارکت</option>
+                                <option value="angel">سرمایه‌گذار فرشته</option>
+                                <option value="venture-capital">ونچر کپیتال</option>
+                                <option value="crowdfunding">کراودفاندینگ</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="amount">مبلغ تقریبی مورد نیاز (تومان)</label>
+                            <input type="number" id="amount" name="amount" placeholder="مثال: 500000000" />
+                        </div>
+
+                        <!-- فیلدهای بیشتر -->
+                    </div>
+                </div>
+
+
+                <!-- بخش اختیاری تجهیزات -->
+                <div class="optional-section">
+                    <div class="toggle-header">
+                        <input type="checkbox" id="need-equipment" />
+                        <label for="need-equipment">به تجهیزات / فضا / ماشین‌آلات نیاز دارم</label>
+                    </div>
+
+                    <div class="section-content" id="equipment-section">
+                        <div class="form-group">
+                            <label for="equipment-type">نوع تجهیزات / امکانات</label>
+                            <select id="equipment-type" name="equipment-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="computers">کامپیوتر / لپ‌تاپ</option>
+                                <option value="workspace">فضای کار / دفتر</option>
+                                <option value="industrial-machinery">ماشین‌آلات صنعتی</option>
+                                <!-- ... -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="equipment-contract">نوع معامله</label>
+                            <select id="equipment-contract" name="equipment-contract">
+                                <option value="rental">اجاره</option>
+                                <option value="sale">خرید</option>
+                                <option value="lease">لیزینگ</option>
+                            </select>
+                        </div>
+
+                        <!-- فیلدهای بیشتر -->
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">ثبت اطلاعات و ادامه</button>
+
+            </form>
+
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggles = [{
+                    checkbox: 'need-team',
+                    section: 'team-section'
+                },
+                {
+                    checkbox: 'need-funding',
+                    section: 'funding-section'
+                },
+                {
+                    checkbox: 'need-equipment',
+                    section: 'equipment-section'
+                }
+            ];
+
+            toggles.forEach(item => {
+                const chk = document.getElementById(item.checkbox);
+                const sec = document.getElementById(item.section);
+
+                chk.addEventListener('change', () => {
+                    sec.classList.toggle('open', chk.checked);
+                });
+            });
+        });
+    </script>
 
 </body>
 
