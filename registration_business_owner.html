@@ -202,10 +202,10 @@
                             </select>
                         </div>
 
-                    <div class="form-group">
-                        <label for="contract-type">لوگو پروژه:</label>
-                        <input type="file">
-                    </div>
+                        <div class="form-group">
+                            <label for="contract-type">لوگو پروژه:</label>
+                            <input type="file">
+                        </div>
 
                     </div>
                     <div class="form-group">
@@ -234,25 +234,93 @@
                     <template id="team-template">
                         <div class="added-item">
                             <div class="form-row">
-                                <select name="team-skills[]" required>
-                                    <option value="">مهارت اصلی</option>
-                                    <option value="programming">برنامه‌نویسی</option>
-                                    <option value="ui-ux">طراحی UI/UX</option>
-                                    <option value="marketing">دیجیتال مارکتینگ</option>
-                                    <option value="sales">فروش و مذاکره</option>
-                                    <!-- بقیه مهارت‌ها را اضافه کنید -->
-                                </select>
+                                <div class="filling-form">
+                                    <div class="form-group">
+                                        <label for="skills">مهارت‌ها:</label>
+                                        <select id="skills" name="skills">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="programming">برنامه‌نویسی (Programming)</option>
+                                            <option value="graphic-design">طراح گرافیک (Graphic Design)</option>
+                                            <option value="project-management">مدیریت پروژه (Project Management)
+                                            </option>
+                                            <option value="digital-marketing">بازاریابی دیجیتال (Digital Marketing)
+                                            </option>
+                                            <option value="data-analysis">تحلیل داده (Data Analysis)</option>
+                                            <option value="sales">فروش (Sales)</option>
+                                            <option value="accounting">حسابداری (Accounting)</option>
+                                            <option value="software-engineering">مهندسی نرم‌افزار (Software Engineering)
+                                            </option>
+                                            <option value="seo">سئو و بهینه‌سازی (SEO)</option>
+                                            <option value="web-design">طراحی وب (Web Design)</option>
+                                            <option value="social-media-management">مدیریت شبکه‌های اجتماعی (Social
+                                                Media
+                                                Management)</option>
+                                            <option value="app-development">توسعه اپلیکیشن (App Development)</option>
+                                            <option value="rnd">تحقیق و توسعه (R&D)</option>
+                                            <option value="hr-management">مدیریت منابع انسانی (HR Management)</option>
+                                            <option value="photography">عکاسی و فیلم‌برداری (Photography/Videography)
+                                            </option>
+                                            <option value="writing">نویسندگی (Writing)</option>
+                                            <option value="translation">ترجمه (Translation)</option>
+                                            <option value="mechanical-engineering">مهندسی مکانیک (Mechanical
+                                                Engineering)
+                                            </option>
+                                            <option value="supply-chain-management">مدیریت زنجیره تأمین (Supply Chain
+                                                Management)</option>
+                                        </select>
+                                    </div>
 
-                                <select name="team-exp[]" required>
-                                    <option value="">سطح تجربه</option>
-                                    <option value="beginner">تازه‌کار</option>
-                                    <option value="intermediate">متوسط</option>
-                                    <option value="professional">حرفه‌ای</option>
-                                    <option value="expert">متخصص</option>
-                                </select>
+                                    <div class="form-group">
+                                        <label for="experience-level">سطح تجربه:</label>
+                                        <select id="experience-level" name="experience-level">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="beginner">تازه‌کار (Beginner)</option>
+                                            <option value="intermediate">متوسط (Intermediate)</option>
+                                            <option value="professional">حرفه‌ای (Professional)</option>
+                                            <option value="expert">متخصص (Expert)</option>
+                                            <option value="no-experience">بدون تجربه (No Experience)</option>
+                                        </select>
+                                    </div>
 
-                                <input type="text" name="team-note[]" placeholder="توضیح کوتاه (اختیاری)" />
+                                    <div class="form-group">
+                                        <label for="languages">زبان‌ها:</label>
+                                        <select id="languages" name="languages">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="persian">فارسی (Persian)</option>
+                                            <option value="english">انگلیسی (English)</option>
+                                            <option value="arabic">عربی (Arabic)</option>
+                                            <option value="turkish">ترکی (Turkish)</option>
+                                            <option value="french">فرانسوی (French)</option>
+                                            <option value="german">آلمانی (German)</option>
+                                            <option value="multilingual">چندزبانه (Multilingual)</option>
+                                        </select>
+                                    </div>
 
+                                    <div class="form-group">
+                                        <label for="location">مکان (جغرافیایی):</label>
+                                        <select id="location" name="location">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="tehran">تهران (Tehran)</option>
+                                            <option value="isfahan">اصفهان (Isfahan)</option>
+                                            <option value="mashhad">مشهد (Mashhad)</option>
+                                            <option value="shiraz">شیراز (Shiraz)</option>
+                                            <option value="tabriz">تبریز (Tabriz)</option>
+                                            <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
+                                            <option value="rural">روستایی (Rural)</option>
+                                            <option value="urban">شهری (Urban)</option>
+                                            <option value="international">بین‌المللی (International)</option>
+                                            <option value="provincial">استانی (Provincial, e.g., Khorasan, Fars)
+                                            </option>
+                                            <option value="regional">منطقه‌ای (Regional, e.g., North, South)</option>
+                                            <option value="abroad">خارج از کشور (Abroad)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="location">توضیحات:</label>
+                                        <input type="text" name="team-note[]" />
+                                    </div>
+                                </div>
                                 <button type="button" class="btn-remove">حذف</button>
                             </div>
                         </div>
@@ -273,19 +341,31 @@
                     <template id="funding-template">
                         <div class="added-item">
                             <div class="form-row">
-                                <select name="funding-type[]" required>
-                                    <option value="">نوع سرمایه‌گذاری</option>
-                                    <option value="equity">سهام / مشارکت</option>
-                                    <option value="angel">سرمایه‌گذار فرشته</option>
-                                    <option value="vc">ونچر کپیتال</option>
-                                    <option value="crowd">کراودفاندینگ</option>
-                                </select>
+                                <div class="filling-form">
 
-                                <input type="number" name="funding-amount[]" placeholder="مبلغ تقریبی (تومان)"
-                                    required />
+                                    <div class="form-group">
+                                        <label for="investment-type">نوع سرمایه‌گذاری:</label>
+                                        <select id="investment-type" name="investment-type">
+                                            <option value="equity">سهام (Equity Investment)</option>
+                                            <option value="loan">وام (Loan)</option>
+                                            <option value="grant">کمک بلاعوض (Grant)</option>
+                                            <option value="angel">سرمایه‌گذاری فرشته (Angel Investment)</option>
+                                            <option value="crowdfunding">سرمایه‌گذاری جمعی (Crowdfunding)</option>
+                                            <option value="venture-capital">سرمایه‌گذاری خطرپذیر (Venture Capital)
+                                            </option>
+                                            <option value="micro-investment">سرمایه‌گذاری خرد (Micro-investment)
+                                            </option>
+                                            <option value="strategic">سرمایه‌گذاری استراتژیک (Strategic Investment)
+                                            </option>
+                                        </select>
+                                    </div>
 
-                                <input type="text" name="funding-note[]" placeholder="توضیح / مرحله (اختیاری)" />
 
+                                    <div class="form-group">
+                                        <label for="location">توضیحات:</label>
+                                        <input type="text" name="team-note[]" />
+                                    </div>
+                                </div>
                                 <button type="button" class="btn-remove">حذف</button>
                             </div>
                         </div>
