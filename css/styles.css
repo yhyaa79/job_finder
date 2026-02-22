@@ -117,7 +117,7 @@ textarea:focus {
 }
 
 .input-project-description {
-  resize: vertical;
+  resize: none;
   min-height: 130px;
   max-height: 320px;
 }

@@ -317,8 +317,28 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label for="amount">:حقوق پرداختی (تومان)</label>
+                                        <select id="investment-type" name="investment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="2">کمتر از ۲ میلیون تومان</option>
+                                            <option value="555">بین ۲ تا ۵ میلیون تومان</option>
+                                            <option value="555">بین ۵ تا ۱۰ میلیون تومان</option>
+                                            <option value="555">بین ۱۰ تا ۲۰ میلیون تومان</option>
+                                            <option value="555">بین ۲۰ تا ۳۰ میلیون تومان</option>
+                                            <option value="555">بین ۳۰ تا ۴۰ میلیون تومان</option>
+                                            <option value="555">بین ۴۰ تا ۵۰ میلیون تومان</option>
+                                            <option value="555">بین ۵۰ تا ۶۰ میلیون تومان</option>
+                                            <option value="555">بین ۶۰ تا ۷۰ میلیون تومان</option>
+                                            <option value="555">بین ۷۰ تا ۸۰ میلیون تومان</option>
+                                            <option value="555">بین ۸۰ تا ۹۰ میلیون تومان</option>
+                                            <option value="555">بین ۹۰ تا ۱۰۰ میلیون تومان</option>
+                                            <option value="555">بیشتر از ۱۰۰ میلیون تومان</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
                                         <label for="location">توضیحات:</label>
-                                        <input type="text" name="team-note[]" />
+                                        <textarea class="input-project-description"></textarea>
                                     </div>
                                 </div>
                                 <button type="button" class="btn-remove">حذف</button>
@@ -342,10 +362,10 @@
                         <div class="added-item">
                             <div class="form-row">
                                 <div class="filling-form">
-
                                     <div class="form-group">
                                         <label for="investment-type">نوع سرمایه‌گذاری:</label>
                                         <select id="investment-type" name="investment-type">
+                                            <option value="">انتخاب کنید</option>
                                             <option value="equity">سهام (Equity Investment)</option>
                                             <option value="loan">وام (Loan)</option>
                                             <option value="grant">کمک بلاعوض (Grant)</option>
@@ -360,10 +380,29 @@
                                         </select>
                                     </div>
 
+                                    <div class="form-group">
+                                        <label for="amount">:مبلغ تقریبی مورد نیاز (تومان)</label>
+                                        <select id="investment-type" name="investment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="10">کمتر از ۱۰ میلیون تومان</option>
+                                            <option value="20">۱۰ میلیون تومان تا ۲۰ میلیون تومان</option>
+                                            <option value="50">۲۰ میلیون تومان تا ۵۰ میلیون تومان</option>
+                                            <option value="100">۵۰ میلیون تومان تا ۱۰۰ میلیون تومان</option>
+                                            <option value="200">۱۰۰ میلیون تومان تا ۲۰۰ میلیون تومان</option>
+                                            <option value="500">۲۰۰ میلیون تومان تا ۵۰۰ میلیون تومان</option>
+                                            <option value="1000">۵۰۰ میلیون تومان تا ۱ میلیارد تومان</option>
+                                            <option value="2000">۱ میلیارد تومان تا ۲ میلیارد تومان</option>
+                                            <option value="5000">۲ میلیارد تومان تا ۵ میلیارد تومان</option>
+                                            <option value="10000">۵ میلیارد تومان تا ۱۰ میلیارد تومان</option>
+                                            <option value="50000">۱۰ میلیارد تومان تا ۵۰ میلیارد تومان</option>
+                                            <option value="100000">۵۰ میلیارد تومان تا ۱۰۰ میلیارد تومان</option>
+                                            <option value="100001">بیشتر از ۱۰۰ میلیارد تومان</option>
+                                        </select>
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="location">توضیحات:</label>
-                                        <input type="text" name="team-note[]" />
+                                        <textarea class="input-project-description"></textarea>
                                     </div>
                                 </div>
                                 <button type="button" class="btn-remove">حذف</button>
@@ -386,23 +425,103 @@
                     <template id="equipment-template">
                         <div class="added-item">
                             <div class="form-row">
-                                <select name="equip-type[]" required>
-                                    <option value="">نوع تجهیزات</option>
-                                    <option value="computers">کامپیوتر / لپ‌تاپ</option>
-                                    <option value="workspace">فضای کار / دفتر</option>
-                                    <option value="industrial">ماشین‌آلات صنعتی</option>
-                                    <!-- ... -->
-                                </select>
+                                <div class="filling-form">
 
-                                <select name="equip-contract[]" required>
-                                    <option value="">نوع معامله</option>
-                                    <option value="rental">اجاره</option>
-                                    <option value="sale">خرید</option>
-                                    <option value="lease">لیزینگ</option>
-                                </select>
+                                    <div class="form-group">
+                                        <label for="equipment-type">دسته‌بندی تجهیزات (برای اجاره یا فروش):</label>
+                                        <select id="equipment-type" name="equipment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="industrial-machinery">ماشین‌آلات صنعتی (Industrial Machinery)
+                                            </option>
+                                            <option value="electronic-devices">دستگاه‌های الکترونیکی (Electronic
+                                                Devices)</option>
+                                            <option value="office-equipment">وسایل اداری (Office Equipment)</option>
+                                            <option value="agriculture">کشاورزی (Agriculture)</option>
+                                            <option value="education">آموزش (Education)</option>
+                                            <option value="health-medical">سلامت و پزشکی (Health/Medical)</option>
+                                            <option value="e-commerce">تجارت الکترونیک (E-commerce)</option>
+                                            <option value="software">نرم‌افزارها (Software)</option>
+                                            <option value="workspace">فضای کاری (Workspace/Office Space)</option>
+                                            <option value="transportation-vehicles">وسایل حمل‌ونقل (Transportation
+                                                Vehicles)</option>
+                                            <option value="medical-equipment">تجهیزات پزشکی (Medical Equipment)</option>
+                                            <option value="agricultural-tools">دستگاه‌های کشاورزی (Agricultural Tools)
+                                            </option>
+                                            <option value="construction">ساخت‌وساز (Construction)</option>
+                                            <option value="retail">خرده‌فروشی (Retail)</option>
+                                            <option value="sports-fitness">ورزش و تناسب اندام (Sports/Fitness)</option>
+                                            <option value="art-design">هنر و طراحی (Art/Design)</option>
+                                            <option value="food-beverage">غذا و نوشیدنی (Food/Beverage)</option>
+                                            <option value="legal">حقوقی (Legal)</option>
+                                            <option value="real-estate">املاک (Real Estate)</option>
+                                            <option value="kitchen-appliances">وسایل آشپزخانه (Kitchen Appliances, e.g.,
+                                                دستگاه آبمیوه‌گیری)</option>
+                                            <option value="computers">کامپیوتر و لپ‌تاپ (Computers/Laptops)</option>
+                                            <option value="printers">پرینتر و اسکنر (Printers/Scanners)</option>
+                                        </select>
+                                    </div>
 
-                                <input type="text" name="equip-note[]" placeholder="توضیحات (اختیاری)" />
 
+                                    <div class="form-group">
+                                        <label for="equipment-location">مکان (جغرافیایی):</label>
+                                        <select id="equipment-location" name="equipment-location">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="tehran">تهران (Tehran)</option>
+                                            <option value="isfahan">اصفهان (Isfahan)</option>
+                                            <option value="mashhad">مشهد (Mashhad)</option>
+                                            <option value="shiraz">شیراز (Shiraz)</option>
+                                            <option value="tabriz">تبریز (Tabriz)</option>
+                                            <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
+                                            <option value="rural">روستایی (Rural)</option>
+                                            <option value="urban">شهری (Urban)</option>
+                                            <option value="international">بین‌المللی (International)</option>
+                                            <option value="provincial">استانی (Provincial, e.g., Khorasan, Fars)
+                                            </option>
+                                            <option value="regional">منطقه‌ای (Regional, e.g., North, South)</option>
+                                            <option value="abroad">خارج از کشور (Abroad)</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="equipment-contract">نوع قرارداد (اجاره یا فروش):</label>
+                                        <select id="equipment-contract" name="equipment-contract">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="rental">اجاره (Rental)</option>
+                                            <option value="sale">فروش (Sale)</option>
+                                            <option value="lease">لیزینگ (Lease)</option>
+                                            <!-- اضافه شده برای کامل‌تر شدن -->
+                                            <option value="subscription">اشتراکی (Subscription)</option>
+                                            <!-- اضافه شده -->
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="amount">:مبلغ تقریبی مورد نیاز (تومان)</label>
+                                        <select id="investment-type" name="investment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="10">کمتر از ۱۰ میلیون تومان</option>
+                                            <option value="20">۱۰ میلیون تومان تا ۲۰ میلیون تومان</option>
+                                            <option value="50">۲۰ میلیون تومان تا ۵۰ میلیون تومان</option>
+                                            <option value="100">۵۰ میلیون تومان تا ۱۰۰ میلیون تومان</option>
+                                            <option value="200">۱۰۰ میلیون تومان تا ۲۰۰ میلیون تومان</option>
+                                            <option value="500">۲۰۰ میلیون تومان تا ۵۰۰ میلیون تومان</option>
+                                            <option value="1000">۵۰۰ میلیون تومان تا ۱ میلیارد تومان</option>
+                                            <option value="2000">۱ میلیارد تومان تا ۲ میلیارد تومان</option>
+                                            <option value="5000">۲ میلیارد تومان تا ۵ میلیارد تومان</option>
+                                            <option value="10000">۵ میلیارد تومان تا ۱۰ میلیارد تومان</option>
+                                            <option value="50000">۱۰ میلیارد تومان تا ۵۰ میلیارد تومان</option>
+                                            <option value="100000">۵۰ میلیارد تومان تا ۱۰۰ میلیارد تومان</option>
+                                            <option value="100001">بیشتر از ۱۰۰ میلیارد تومان</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="location">توضیحات:</label>
+                                        <textarea class="input-project-description"></textarea>
+                                    </div>
+                                </div>
                                 <button type="button" class="btn-remove">حذف</button>
                             </div>
                         </div>
