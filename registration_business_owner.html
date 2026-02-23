@@ -28,7 +28,7 @@
                     <legend>اطلاعات اصلی کسب‌وکار</legend>
 
                     <div class="filling-form">
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="system-type">نوع سیستم / ساختار سازمانی</label>
                             <select id="system-type" name="system-type">
                                 <option value="">انتخاب کنید</option>
@@ -49,7 +49,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="team-size">اندازه تیم:</label>
                             <select id="team-size" name="team-size">
                                 <option value="">انتخاب کنید</option>
@@ -61,7 +61,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="business-model">مدل کسب‌وکار:</label>
                             <select id="business-model" name="business-model">
                                 <option value="">انتخاب کنید</option>
@@ -79,7 +79,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="startup-stage">مرحله رشد / نوع استارتاپ:</label>
                             <select id="startup-stage" name="startup-stage">
                                 <option value="">انتخاب کنید</option>
@@ -94,7 +94,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="product-type">نوع محصول / خدمت:</label>
                             <select id="product-type" name="product-type">
                                 <option value="">انتخاب کنید</option>
@@ -111,7 +111,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="market-focus">تمرکز جغرافیایی / بازار هدف:</label>
                             <select id="market-focus" name="market-focus">
                                 <option value="">انتخاب کنید</option>
@@ -124,7 +124,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="problem-solved">نیاز / مشکل حل‌شده:</label>
                             <select id="problem-solved" name="problem-solved">
                                 <option value="">انتخاب کنید</option>
@@ -140,7 +140,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="core-technology">نوآوری / فناوری اصلی:</label>
                             <select id="core-technology" name="core-technology">
                                 <option value="">انتخاب کنید</option>
@@ -155,7 +155,7 @@
                         </div>
 
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="contract-type">نوع قرارداد:</label>
                             <select id="contract-type" name="contract-type">
                                 <option value="">انتخاب کنید</option>
@@ -171,7 +171,7 @@
 
 
 
-                        <div class="form-group">
+                        <div class="form-group form-group-select">
                             <label for="main-industry">دسته‌بندی اصلی صنایع / حوزه‌های فعالیت:</label>
                             <select id="main-industry" name="main-industry">
                                 <option value="">انتخاب کنید</option>
@@ -235,7 +235,7 @@
                         <div class="added-item">
                             <div class="form-row">
                                 <div class="filling-form">
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
                                         <label for="skills">مهارت‌ها:</label>
                                         <select id="skills" name="skills">
                                             <option value="">انتخاب کنید</option>
@@ -270,7 +270,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
                                         <label for="experience-level">سطح تجربه:</label>
                                         <select id="experience-level" name="experience-level">
                                             <option value="">انتخاب کنید</option>
@@ -282,7 +282,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
                                         <label for="languages">زبان‌ها:</label>
                                         <select id="languages" name="languages">
                                             <option value="">انتخاب کنید</option>
@@ -296,7 +296,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
                                         <label for="location">مکان (جغرافیایی):</label>
                                         <select id="location" name="location">
                                             <option value="">انتخاب کنید</option>
@@ -316,7 +316,17 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
+                                        <label for="languages">جنسیت:</label>
+                                        <select id="languages" name="languages">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="man">مرد</option>
+                                            <option value="woman">زن</option>
+                                            <option value="">فرقی نداره</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group form-group-select">
                                         <label for="amount">:حقوق پرداختی (تومان)</label>
                                         <select id="investment-type" name="investment-type">
                                             <option value="">انتخاب کنید</option>
@@ -335,11 +345,10 @@
                                             <option value="555">بیشتر از ۱۰۰ میلیون تومان</option>
                                         </select>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="location">توضیحات:</label>
-                                        <textarea class="input-project-description"></textarea>
-                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">توضیحات:</label>
+                                    <textarea class="input-project-description"></textarea>
                                 </div>
                                 <button type="button" class="btn-remove">حذف</button>
                             </div>
@@ -362,7 +371,7 @@
                         <div class="added-item">
                             <div class="form-row">
                                 <div class="filling-form">
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
                                         <label for="investment-type">نوع سرمایه‌گذاری:</label>
                                         <select id="investment-type" name="investment-type">
                                             <option value="">انتخاب کنید</option>
@@ -380,8 +389,8 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="amount">:مبلغ تقریبی مورد نیاز (تومان)</label>
+                                    <div class="form-group form-group-select">
+                                        <label for="amount">:مبلغ مورد نیاز (تومان)</label>
                                         <select id="investment-type" name="investment-type">
                                             <option value="">انتخاب کنید</option>
                                             <option value="10">کمتر از ۱۰ میلیون تومان</option>
@@ -399,11 +408,10 @@
                                             <option value="100001">بیشتر از ۱۰۰ میلیارد تومان</option>
                                         </select>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="location">توضیحات:</label>
-                                        <textarea class="input-project-description"></textarea>
-                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">توضیحات:</label>
+                                    <textarea class="input-project-description"></textarea>
                                 </div>
                                 <button type="button" class="btn-remove">حذف</button>
                             </div>
@@ -427,7 +435,7 @@
                             <div class="form-row">
                                 <div class="filling-form">
 
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
                                         <label for="equipment-type">دسته‌بندی تجهیزات (برای اجاره یا فروش):</label>
                                         <select id="equipment-type" name="equipment-type">
                                             <option value="">انتخاب کنید</option>
@@ -462,7 +470,7 @@
                                     </div>
 
 
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
                                         <label for="equipment-location">مکان (جغرافیایی):</label>
                                         <select id="equipment-location" name="equipment-location">
                                             <option value="">انتخاب کنید</option>
@@ -483,7 +491,7 @@
                                     </div>
 
 
-                                    <div class="form-group">
+                                    <div class="form-group form-group-select">
                                         <label for="equipment-contract">نوع قرارداد (اجاره یا فروش):</label>
                                         <select id="equipment-contract" name="equipment-contract">
                                             <option value="">انتخاب کنید</option>
@@ -497,8 +505,8 @@
                                     </div>
 
 
-                                    <div class="form-group">
-                                        <label for="amount">:مبلغ تقریبی مورد نیاز (تومان)</label>
+                                    <div class="form-group form-group-select">
+                                        <label for="amount">:مبلغ قایل پرداخت (تومان)</label>
                                         <select id="investment-type" name="investment-type">
                                             <option value="">انتخاب کنید</option>
                                             <option value="10">کمتر از ۱۰ میلیون تومان</option>
@@ -516,11 +524,10 @@
                                             <option value="100001">بیشتر از ۱۰۰ میلیارد تومان</option>
                                         </select>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="location">توضیحات:</label>
-                                        <textarea class="input-project-description"></textarea>
-                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">توضیحات:</label>
+                                    <textarea class="input-project-description"></textarea>
                                 </div>
                                 <button type="button" class="btn-remove">حذف</button>
                             </div>
