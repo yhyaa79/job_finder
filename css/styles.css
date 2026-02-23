@@ -87,7 +87,7 @@ legend {
 }
 
 .filling-form {
-      display: ruby;
+  display: ruby;
 }
 
 label {
@@ -265,3 +265,104 @@ textarea:focus {
 
 
 
+/* ────────────────────────────────────────────────
+  باز شدن قسمت انتخاب گزینه ها
+───────────────────────────────────────────────── */
+
+.multi-select-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.select-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.2s;
+}
+
+.select-header:hover {
+  border-color: #9ca3af;
+}
+
+.selected-text {
+  color: #374151;
+  font-size: 15px;
+}
+
+.arrow {
+  font-size: 12px;
+  transition: transform 0.25s ease;
+  color: #6b7280;
+}
+
+input[type="checkbox"].toggle-input {
+  display: none;
+}
+
+.options-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  max-height: 260px;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+/* وقتی باز است */
+#toggle-languages:checked~.options-container {
+  display: block;
+}
+
+#toggle-languages:checked~.select-header .arrow {
+  transform: rotate(180deg);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.option:hover {
+  background: #f3f4f6;
+}
+
+.option input[type="checkbox"] {
+  margin-left: 12px;
+  width: 18px;
+  height: 18px;
+  accent-color: #2563eb;
+}
+
+.option span {
+  font-size: 15px;
+  color: #1f2937;
+}
+
+/* اسکرول بار زیباتر */
+.options-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.options-container::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 3px;
+}

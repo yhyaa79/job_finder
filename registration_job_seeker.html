@@ -1,11 +1,533 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت‌نام جویندگان کار</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
 </head>
+
 <body>
-    
+
+    <div class="container">
+        <div class="header">
+            <h1>ثبت‌نام جویندگان کار</h1>
+            <p>اطلاعات خود را با دقت وارد کنید</p>
+        </div>
+
+        <div class="content">
+
+            <form id="business-form">
+
+                <fieldset>
+                    <legend>اطلاعات فردی</legend>
+
+                    <div class="filling-form">
+                        <div class="form-group form-group-select">
+                            <label for="skills">مهارت‌ها:</label>
+                            <select id="skills" name="skills">
+                                <option value="">انتخاب کنید</option>
+                                <option value="programming">برنامه‌نویسی (Programming)</option>
+                                <option value="graphic-design">طراح گرافیک (Graphic Design)</option>
+                                <option value="project-management">مدیریت پروژه (Project Management)</option>
+                                <option value="digital-marketing">بازاریابی دیجیتال (Digital Marketing)</option>
+                                <option value="data-analysis">تحلیل داده (Data Analysis)</option>
+                                <option value="sales">فروش (Sales)</option>
+                                <option value="accounting">حسابداری (Accounting)</option>
+                                <option value="software-engineering">مهندسی نرم‌افزار (Software Engineering)</option>
+                                <option value="seo">سئو و بهینه‌سازی (SEO)</option>
+                                <option value="web-design">طراحی وب (Web Design)</option>
+                                <option value="social-media-management">مدیریت شبکه‌های اجتماعی (Social Media
+                                    Management)</option>
+                                <option value="app-development">توسعه اپلیکیشن (App Development)</option>
+                                <option value="rnd">تحقیق و توسعه (R&D)</option>
+                                <option value="hr-management">مدیریت منابع انسانی (HR Management)</option>
+                                <option value="photography">عکاسی و فیلم‌برداری (Photography/Videography)</option>
+                                <option value="writing">نویسندگی (Writing)</option>
+                                <option value="translation">ترجمه (Translation)</option>
+                                <option value="mechanical-engineering">مهندسی مکانیک (Mechanical Engineering)</option>
+                                <option value="supply-chain-management">مدیریت زنجیره تأمین (Supply Chain Management)
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group form-group-select">
+                            <label for="experience-level">سطح تجربه:</label>
+                            <select id="experience-level" name="experience-level">
+                                <option value="">انتخاب کنید</option>
+                                <option value="beginner">تازه‌کار (Beginner)</option>
+                                <option value="intermediate">متوسط (Intermediate)</option>
+                                <option value="professional">حرفه‌ای (Professional)</option>
+                                <option value="expert">متخصص (Expert)</option>
+                                <option value="no-experience">بدون تجربه (No Experience)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group-select">
+                            <label for="location">مکان (جغرافیایی):</label>
+                            <select id="location" name="location">
+                                <option value="">انتخاب کنید</option>
+                                <option value="tehran">تهران (Tehran)</option>
+                                <option value="isfahan">اصفهان (Isfahan)</option>
+                                <option value="mashhad">مشهد (Mashhad)</option>
+                                <option value="shiraz">شیراز (Shiraz)</option>
+                                <option value="tabriz">تبریز (Tabriz)</option>
+                                <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
+                                <option value="rural">روستایی (Rural)</option>
+                                <option value="urban">شهری (Urban)</option>
+                                <option value="international">بین‌المللی (International)</option>
+                                <option value="provincial">استانی (Provincial, e.g., Khorasan, Fars)</option>
+                                <option value="regional">منطقه‌ای (Regional, e.g., North, South)</option>
+                                <option value="abroad">خارج از کشور (Abroad)</option>
+                            </select>
+                        </div>
+
+                        <div class="multi-select-wrapper">
+                            <input type="checkbox" id="toggle-languages" class="toggle-input" hidden>
+
+                            <label for="toggle-languages" class="select-header">
+                                <span id="selected-text">زبان‌ها را انتخاب کنید</span>
+                                <span class="arrow">▼</span>
+                            </label>
+
+                            <div class="options-container">
+                                <!-- همان چک‌باکس‌ها مثل بالا -->
+                                <label class="option">
+                                    <input type="checkbox" name="languages[]" value="persian">
+                                    <span>فارسی (Persian)</span>
+                                </label>
+
+                                <label class="option">
+                                    <input type="checkbox" name="languages[]" value="english">
+                                    <span>انگلیسی (English)</span>
+                                </label>
+
+                                <label class="option">
+                                    <input type="checkbox" name="languages[]" value="arabic">
+                                    <span>عربی (Arabic)</span>
+                                </label>
+
+                                <label class="option">
+                                    <input type="checkbox" name="languages[]" value="turkish">
+                                    <span>ترکی (Turkish)</span>
+                                </label>
+
+                                <label class="option">
+                                    <input type="checkbox" name="languages[]" value="french">
+                                    <span>فرانسوی (French)</span>
+                                </label>
+
+                                <label class="option">
+                                    <input type="checkbox" name="languages[]" value="german">
+                                    <span>آلمانی (German)</span>
+                                </label>
+
+                                <label class="option">
+                                    <input type="checkbox" name="languages[]" value="multilingual">
+                                    <span>چندزبانه (Multilingual)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-select">
+                            <label for="system-type">aaa</label>
+                            <select id="system-type" name="system-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="aaa">aaa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group-select">
+                            <label for="system-type">aaa</label>
+                            <select id="system-type" name="system-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="aaa">aaa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group-select">
+                            <label for="system-type">aaa</label>
+                            <select id="system-type" name="system-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="aaa">aaa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group-select">
+                            <label for="system-type">aaa</label>
+                            <select id="system-type" name="system-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="aaa">aaa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group-select">
+                            <label for="system-type">aaa</label>
+                            <select id="system-type" name="system-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="aaa">aaa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group-select">
+                            <label for="system-type">aaa</label>
+                            <select id="system-type" name="system-type">
+                                <option value="">انتخاب کنید</option>
+                                <option value="aaa">aaa</option>
+                            </select>
+                        </div>
+
+
+
+
+
+
+                        <div class="form-group">
+                            <label for="contract-type">عکس پروفایل:</label>
+                            <input type="file">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contract-type">نام و نام خوانوادگی:</label>
+                        <textarea class="input-project-name"></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="contract-type">توضیحات فردی:</label>
+                        <textarea class="input-project-description"></textarea>
+                    </div>
+                </fieldset>
+
+
+                <!-- بخش نیروی انسانی -->
+                <div class="optional-section" id="team-block">
+                    <div class="toggle-header addable-header">
+                        <button type="button" class="btn-add" data-target="team">
+                            + نیاز به نیروی انسانی دارم
+                        </button>
+                    </div>
+
+                    <div class="added-items" id="team-items"></div>
+
+                    <!-- قالب مخفی برای clone کردن -->
+                    <template id="team-template">
+                        <div class="added-item">
+                            <div class="form-row">
+                                <div class="filling-form">
+                                    <div class="form-group form-group-select">
+                                        <label for="skills">مهارت‌ها:</label>
+                                        <select id="skills" name="skills">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="programming">برنامه‌نویسی (Programming)</option>
+                                            <option value="graphic-design">طراح گرافیک (Graphic Design)</option>
+                                            <option value="project-management">مدیریت پروژه (Project Management)
+                                            </option>
+                                            <option value="digital-marketing">بازاریابی دیجیتال (Digital Marketing)
+                                            </option>
+                                            <option value="data-analysis">تحلیل داده (Data Analysis)</option>
+                                            <option value="sales">فروش (Sales)</option>
+                                            <option value="accounting">حسابداری (Accounting)</option>
+                                            <option value="software-engineering">مهندسی نرم‌افزار (Software Engineering)
+                                            </option>
+                                            <option value="seo">سئو و بهینه‌سازی (SEO)</option>
+                                            <option value="web-design">طراحی وب (Web Design)</option>
+                                            <option value="social-media-management">مدیریت شبکه‌های اجتماعی (Social
+                                                Media
+                                                Management)</option>
+                                            <option value="app-development">توسعه اپلیکیشن (App Development)</option>
+                                            <option value="rnd">تحقیق و توسعه (R&D)</option>
+                                            <option value="hr-management">مدیریت منابع انسانی (HR Management)</option>
+                                            <option value="photography">عکاسی و فیلم‌برداری (Photography/Videography)
+                                            </option>
+                                            <option value="writing">نویسندگی (Writing)</option>
+                                            <option value="translation">ترجمه (Translation)</option>
+                                            <option value="mechanical-engineering">مهندسی مکانیک (Mechanical
+                                                Engineering)
+                                            </option>
+                                            <option value="supply-chain-management">مدیریت زنجیره تأمین (Supply Chain
+                                                Management)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group form-group-select">
+                                        <label for="experience-level">سطح تجربه:</label>
+                                        <select id="experience-level" name="experience-level">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="beginner">تازه‌کار (Beginner)</option>
+                                            <option value="intermediate">متوسط (Intermediate)</option>
+                                            <option value="professional">حرفه‌ای (Professional)</option>
+                                            <option value="expert">متخصص (Expert)</option>
+                                            <option value="no-experience">بدون تجربه (No Experience)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group form-group-select">
+                                        <label for="languages">زبان‌ها:</label>
+                                        <select id="languages" name="languages">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="persian">فارسی (Persian)</option>
+                                            <option value="english">انگلیسی (English)</option>
+                                            <option value="arabic">عربی (Arabic)</option>
+                                            <option value="turkish">ترکی (Turkish)</option>
+                                            <option value="french">فرانسوی (French)</option>
+                                            <option value="german">آلمانی (German)</option>
+                                            <option value="multilingual">چندزبانه (Multilingual)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group form-group-select">
+                                        <label for="location">مکان (جغرافیایی):</label>
+                                        <select id="location" name="location">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="tehran">تهران (Tehran)</option>
+                                            <option value="isfahan">اصفهان (Isfahan)</option>
+                                            <option value="mashhad">مشهد (Mashhad)</option>
+                                            <option value="shiraz">شیراز (Shiraz)</option>
+                                            <option value="tabriz">تبریز (Tabriz)</option>
+                                            <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
+                                            <option value="rural">روستایی (Rural)</option>
+                                            <option value="urban">شهری (Urban)</option>
+                                            <option value="international">بین‌المللی (International)</option>
+                                            <option value="provincial">استانی (Provincial, e.g., Khorasan, Fars)
+                                            </option>
+                                            <option value="regional">منطقه‌ای (Regional, e.g., North, South)</option>
+                                            <option value="abroad">خارج از کشور (Abroad)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group form-group-select">
+                                        <label for="languages">جنسیت:</label>
+                                        <select id="languages" name="languages">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="man">مرد</option>
+                                            <option value="woman">زن</option>
+                                            <option value="">فرقی نداره</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group form-group-select">
+                                        <label for="amount">:حقوق پرداختی (تومان)</label>
+                                        <select id="investment-type" name="investment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="2">کمتر از ۲ میلیون تومان</option>
+                                            <option value="555">بین ۲ تا ۵ میلیون تومان</option>
+                                            <option value="555">بین ۵ تا ۱۰ میلیون تومان</option>
+                                            <option value="555">بین ۱۰ تا ۲۰ میلیون تومان</option>
+                                            <option value="555">بین ۲۰ تا ۳۰ میلیون تومان</option>
+                                            <option value="555">بین ۳۰ تا ۴۰ میلیون تومان</option>
+                                            <option value="555">بین ۴۰ تا ۵۰ میلیون تومان</option>
+                                            <option value="555">بین ۵۰ تا ۶۰ میلیون تومان</option>
+                                            <option value="555">بین ۶۰ تا ۷۰ میلیون تومان</option>
+                                            <option value="555">بین ۷۰ تا ۸۰ میلیون تومان</option>
+                                            <option value="555">بین ۸۰ تا ۹۰ میلیون تومان</option>
+                                            <option value="555">بین ۹۰ تا ۱۰۰ میلیون تومان</option>
+                                            <option value="555">بیشتر از ۱۰۰ میلیون تومان</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">توضیحات:</label>
+                                    <textarea class="input-project-description"></textarea>
+                                </div>
+                                <button type="button" class="btn-remove">حذف</button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+
+                <!-- بخش سرمایه‌گذاری (مشابه) -->
+                <div class="optional-section" id="funding-block">
+                    <div class="toggle-header addable-header">
+                        <button type="button" class="btn-add" data-target="funding">
+                            + نیاز به جذب سرمایه دارم
+                        </button>
+                    </div>
+
+                    <div class="added-items" id="funding-items"></div>
+
+                    <template id="funding-template">
+                        <div class="added-item">
+                            <div class="form-row">
+                                <div class="filling-form">
+                                    <div class="form-group form-group-select">
+                                        <label for="investment-type">نوع سرمایه‌گذاری:</label>
+                                        <select id="investment-type" name="investment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="equity">سهام (Equity Investment)</option>
+                                            <option value="loan">وام (Loan)</option>
+                                            <option value="grant">کمک بلاعوض (Grant)</option>
+                                            <option value="angel">سرمایه‌گذاری فرشته (Angel Investment)</option>
+                                            <option value="crowdfunding">سرمایه‌گذاری جمعی (Crowdfunding)</option>
+                                            <option value="venture-capital">سرمایه‌گذاری خطرپذیر (Venture Capital)
+                                            </option>
+                                            <option value="micro-investment">سرمایه‌گذاری خرد (Micro-investment)
+                                            </option>
+                                            <option value="strategic">سرمایه‌گذاری استراتژیک (Strategic Investment)
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group form-group-select">
+                                        <label for="amount">:مبلغ مورد نیاز (تومان)</label>
+                                        <select id="investment-type" name="investment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="10">کمتر از ۱۰ میلیون تومان</option>
+                                            <option value="20">۱۰ میلیون تومان تا ۲۰ میلیون تومان</option>
+                                            <option value="50">۲۰ میلیون تومان تا ۵۰ میلیون تومان</option>
+                                            <option value="100">۵۰ میلیون تومان تا ۱۰۰ میلیون تومان</option>
+                                            <option value="200">۱۰۰ میلیون تومان تا ۲۰۰ میلیون تومان</option>
+                                            <option value="500">۲۰۰ میلیون تومان تا ۵۰۰ میلیون تومان</option>
+                                            <option value="1000">۵۰۰ میلیون تومان تا ۱ میلیارد تومان</option>
+                                            <option value="2000">۱ میلیارد تومان تا ۲ میلیارد تومان</option>
+                                            <option value="5000">۲ میلیارد تومان تا ۵ میلیارد تومان</option>
+                                            <option value="10000">۵ میلیارد تومان تا ۱۰ میلیارد تومان</option>
+                                            <option value="50000">۱۰ میلیارد تومان تا ۵۰ میلیارد تومان</option>
+                                            <option value="100000">۵۰ میلیارد تومان تا ۱۰۰ میلیارد تومان</option>
+                                            <option value="100001">بیشتر از ۱۰۰ میلیارد تومان</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">توضیحات:</label>
+                                    <textarea class="input-project-description"></textarea>
+                                </div>
+                                <button type="button" class="btn-remove">حذف</button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+
+                <!-- بخش تجهیزات (مشابه) -->
+                <div class="optional-section" id="equipment-block">
+                    <div class="toggle-header addable-header">
+                        <button type="button" class="btn-add" data-target="equipment">
+                            + نیاز به تجهیزات / فضا دارم
+                        </button>
+                    </div>
+
+                    <div class="added-items" id="equipment-items"></div>
+
+                    <template id="equipment-template">
+                        <div class="added-item">
+                            <div class="form-row">
+                                <div class="filling-form">
+
+                                    <div class="form-group form-group-select">
+                                        <label for="equipment-type">دسته‌بندی تجهیزات (برای اجاره یا فروش):</label>
+                                        <select id="equipment-type" name="equipment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="industrial-machinery">ماشین‌آلات صنعتی (Industrial Machinery)
+                                            </option>
+                                            <option value="electronic-devices">دستگاه‌های الکترونیکی (Electronic
+                                                Devices)</option>
+                                            <option value="office-equipment">وسایل اداری (Office Equipment)</option>
+                                            <option value="agriculture">کشاورزی (Agriculture)</option>
+                                            <option value="education">آموزش (Education)</option>
+                                            <option value="health-medical">سلامت و پزشکی (Health/Medical)</option>
+                                            <option value="e-commerce">تجارت الکترونیک (E-commerce)</option>
+                                            <option value="software">نرم‌افزارها (Software)</option>
+                                            <option value="workspace">فضای کاری (Workspace/Office Space)</option>
+                                            <option value="transportation-vehicles">وسایل حمل‌ونقل (Transportation
+                                                Vehicles)</option>
+                                            <option value="medical-equipment">تجهیزات پزشکی (Medical Equipment)</option>
+                                            <option value="agricultural-tools">دستگاه‌های کشاورزی (Agricultural Tools)
+                                            </option>
+                                            <option value="construction">ساخت‌وساز (Construction)</option>
+                                            <option value="retail">خرده‌فروشی (Retail)</option>
+                                            <option value="sports-fitness">ورزش و تناسب اندام (Sports/Fitness)</option>
+                                            <option value="art-design">هنر و طراحی (Art/Design)</option>
+                                            <option value="food-beverage">غذا و نوشیدنی (Food/Beverage)</option>
+                                            <option value="legal">حقوقی (Legal)</option>
+                                            <option value="real-estate">املاک (Real Estate)</option>
+                                            <option value="kitchen-appliances">وسایل آشپزخانه (Kitchen Appliances, e.g.,
+                                                دستگاه آبمیوه‌گیری)</option>
+                                            <option value="computers">کامپیوتر و لپ‌تاپ (Computers/Laptops)</option>
+                                            <option value="printers">پرینتر و اسکنر (Printers/Scanners)</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group form-group-select">
+                                        <label for="equipment-location">مکان (جغرافیایی):</label>
+                                        <select id="equipment-location" name="equipment-location">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="tehran">تهران (Tehran)</option>
+                                            <option value="isfahan">اصفهان (Isfahan)</option>
+                                            <option value="mashhad">مشهد (Mashhad)</option>
+                                            <option value="shiraz">شیراز (Shiraz)</option>
+                                            <option value="tabriz">تبریز (Tabriz)</option>
+                                            <option value="online-remote">آنلاین/ریموت (Online/Remote)</option>
+                                            <option value="rural">روستایی (Rural)</option>
+                                            <option value="urban">شهری (Urban)</option>
+                                            <option value="international">بین‌المللی (International)</option>
+                                            <option value="provincial">استانی (Provincial, e.g., Khorasan, Fars)
+                                            </option>
+                                            <option value="regional">منطقه‌ای (Regional, e.g., North, South)</option>
+                                            <option value="abroad">خارج از کشور (Abroad)</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group form-group-select">
+                                        <label for="equipment-contract">نوع قرارداد (اجاره یا فروش):</label>
+                                        <select id="equipment-contract" name="equipment-contract">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="rental">اجاره (Rental)</option>
+                                            <option value="sale">فروش (Sale)</option>
+                                            <option value="lease">لیزینگ (Lease)</option>
+                                            <!-- اضافه شده برای کامل‌تر شدن -->
+                                            <option value="subscription">اشتراکی (Subscription)</option>
+                                            <!-- اضافه شده -->
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group form-group-select">
+                                        <label for="amount">:مبلغ قایل پرداخت (تومان)</label>
+                                        <select id="investment-type" name="investment-type">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="10">کمتر از ۱۰ میلیون تومان</option>
+                                            <option value="20">۱۰ میلیون تومان تا ۲۰ میلیون تومان</option>
+                                            <option value="50">۲۰ میلیون تومان تا ۵۰ میلیون تومان</option>
+                                            <option value="100">۵۰ میلیون تومان تا ۱۰۰ میلیون تومان</option>
+                                            <option value="200">۱۰۰ میلیون تومان تا ۲۰۰ میلیون تومان</option>
+                                            <option value="500">۲۰۰ میلیون تومان تا ۵۰۰ میلیون تومان</option>
+                                            <option value="1000">۵۰۰ میلیون تومان تا ۱ میلیارد تومان</option>
+                                            <option value="2000">۱ میلیارد تومان تا ۲ میلیارد تومان</option>
+                                            <option value="5000">۲ میلیارد تومان تا ۵ میلیارد تومان</option>
+                                            <option value="10000">۵ میلیارد تومان تا ۱۰ میلیارد تومان</option>
+                                            <option value="50000">۱۰ میلیارد تومان تا ۵۰ میلیارد تومان</option>
+                                            <option value="100000">۵۰ میلیارد تومان تا ۱۰۰ میلیارد تومان</option>
+                                            <option value="100001">بیشتر از ۱۰۰ میلیارد تومان</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">توضیحات:</label>
+                                    <textarea class="input-project-description"></textarea>
+                                </div>
+                                <button type="button" class="btn-remove">حذف</button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <button type="submit" class="btn">ثبت اطلاعات و ادامه</button>
+
+            </form>
+
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+
 </body>
+
 </html>
