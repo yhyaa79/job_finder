@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .map(ch => ch.nextElementSibling.textContent.trim().split(' (')[0]);
 
       if (selected.length === 0) {
-        display.textContent = 'زبان‌ها را انتخاب کنید';
+        display.textContent = 'انتخاب کنید';
       } else if (selected.length <= 3) {
         display.textContent = selected.join('، ') + ' انتخاب شد';
       } else {
-        display.textContent = selected.length + ' زبان انتخاب شد';
+        display.textContent = selected.length + ' گزینه انتخاب شد';
       }
     }
 

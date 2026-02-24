@@ -25,32 +25,92 @@
                     <legend>اطلاعات فردی</legend>
 
                     <div class="filling-form">
-                        <div class="form-group form-group-select">
-                            <label for="skills">مهارت‌ها:</label>
-                            <select id="skills" name="skills">
-                                <option value="">انتخاب کنید</option>
-                                <option value="programming">برنامه‌نویسی (Programming)</option>
-                                <option value="graphic-design">طراح گرافیک (Graphic Design)</option>
-                                <option value="project-management">مدیریت پروژه (Project Management)</option>
-                                <option value="digital-marketing">بازاریابی دیجیتال (Digital Marketing)</option>
-                                <option value="data-analysis">تحلیل داده (Data Analysis)</option>
-                                <option value="sales">فروش (Sales)</option>
-                                <option value="accounting">حسابداری (Accounting)</option>
-                                <option value="software-engineering">مهندسی نرم‌افزار (Software Engineering)</option>
-                                <option value="seo">سئو و بهینه‌سازی (SEO)</option>
-                                <option value="web-design">طراحی وب (Web Design)</option>
-                                <option value="social-media-management">مدیریت شبکه‌های اجتماعی (Social Media
-                                    Management)</option>
-                                <option value="app-development">توسعه اپلیکیشن (App Development)</option>
-                                <option value="rnd">تحقیق و توسعه (R&D)</option>
-                                <option value="hr-management">مدیریت منابع انسانی (HR Management)</option>
-                                <option value="photography">عکاسی و فیلم‌برداری (Photography/Videography)</option>
-                                <option value="writing">نویسندگی (Writing)</option>
-                                <option value="translation">ترجمه (Translation)</option>
-                                <option value="mechanical-engineering">مهندسی مکانیک (Mechanical Engineering)</option>
-                                <option value="supply-chain-management">مدیریت زنجیره تأمین (Supply Chain Management)
-                                </option>
-                            </select>
+                        <!-- مهارت‌ها -->
+                        <div class="multi-select-wrapper form-group form-group-select">
+                            <label for="toggle-skills">مهارت‌ها:</label>
+                            <input type="checkbox" id="toggle-skills" class="toggle-input" hidden>
+                            <label for="toggle-skills" class="select-header">
+                                <span id="selected-skills">انتخاب کنید</span>
+                                <span class="arrow">▼</span>
+                            </label>
+                            <div class="options-container">
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="programming">
+                                    <span>برنامه‌نویسی (Programming)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="graphic-design">
+                                    <span>طراح گرافیک (Graphic Design)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="project-management">
+                                    <span>مدیریت پروژه (Project Management)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="digital-marketing">
+                                    <span>بازاریابی دیجیتال (Digital Marketing)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="data-analysis">
+                                    <span>تحلیل داده (Data Analysis)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="sales">
+                                    <span>فروش (Sales)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="accounting">
+                                    <span>حسابداری (Accounting)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="software-engineering">
+                                    <span>مهندسی نرم‌افزار (Software Engineering)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="seo">
+                                    <span>سئو و بهینه‌سازی (SEO)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="web-design">
+                                    <span>طراحی وب (Web Design)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="social-media-management">
+                                    <span>مدیریت شبکه‌های اجتماعی (Social Media Management)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="app-development">
+                                    <span>توسعه اپلیکیشن (App Development)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="rnd">
+                                    <span>تحقیق و توسعه (R&D)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="hr-management">
+                                    <span>مدیریت منابع انسانی (HR Management)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="photography">
+                                    <span>عکاسی و فیلم‌برداری (Photography/Videography)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="writing">
+                                    <span>نویسندگی (Writing)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="translation">
+                                    <span>ترجمه (Translation)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="mechanical-engineering">
+                                    <span>مهندسی مکانیک (Mechanical Engineering)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" name="skills[]" value="supply-chain-management">
+                                    <span>مدیریت زنجیره تأمین (Supply Chain Management)</span>
+                                </label>
+                            </div>
                         </div>
 
 
@@ -85,49 +145,31 @@
                             </select>
                         </div>
 
-                        <div class="multi-select-wrapper">
+                        <div class="multi-select-wrapper form-group form-group-select">
+                            <label for="location">زبان ها:</label>
                             <input type="checkbox" id="toggle-languages" class="toggle-input" hidden>
 
                             <label for="toggle-languages" class="select-header">
-                                <span id="selected-text">زبان‌ها را انتخاب کنید</span>
+                                <span id="selected-text">انتخاب کنید</span>
                                 <span class="arrow">▼</span>
                             </label>
 
                             <div class="options-container">
-                                <!-- همان چک‌باکس‌ها مثل بالا -->
                                 <label class="option">
-                                    <input type="checkbox" name="languages[]" value="persian">
+                                    <input type="checkbox" name="languages[]" value="persian" class="lang-check">
                                     <span>فارسی (Persian)</span>
                                 </label>
-
                                 <label class="option">
-                                    <input type="checkbox" name="languages[]" value="english">
+                                    <input type="checkbox" name="languages[]" value="english" class="lang-check">
                                     <span>انگلیسی (English)</span>
                                 </label>
-
                                 <label class="option">
-                                    <input type="checkbox" name="languages[]" value="arabic">
+                                    <input type="checkbox" name="languages[]" value="arabic" class="lang-check">
                                     <span>عربی (Arabic)</span>
                                 </label>
-
                                 <label class="option">
-                                    <input type="checkbox" name="languages[]" value="turkish">
+                                    <input type="checkbox" name="languages[]" value="turkish" class="lang-check">
                                     <span>ترکی (Turkish)</span>
-                                </label>
-
-                                <label class="option">
-                                    <input type="checkbox" name="languages[]" value="french">
-                                    <span>فرانسوی (French)</span>
-                                </label>
-
-                                <label class="option">
-                                    <input type="checkbox" name="languages[]" value="german">
-                                    <span>آلمانی (German)</span>
-                                </label>
-
-                                <label class="option">
-                                    <input type="checkbox" name="languages[]" value="multilingual">
-                                    <span>چندزبانه (Multilingual)</span>
                                 </label>
                             </div>
                         </div>
