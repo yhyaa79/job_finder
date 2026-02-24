@@ -24,7 +24,96 @@
   padding: 0;
 }
 
-body {
+
+/* ────────────────────────────────────────────────
+  main
+───────────────────────────────────────────────── */
+
+.main-body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--gray-50);
+  color: var(--gray-800);
+  line-height: 1.5;
+  font-size: 0.94rem;
+  overflow: hidden;
+}
+
+.main-container {
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.main-header {
+  background: var(--primary);
+  color: white;
+  padding: 8px;
+}
+
+.main-header h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.main-header p {
+  font-size: 0.92rem;
+  opacity: 0.95;
+}
+
+.main-content {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  height: 651px;
+}
+
+.main-sidebar {
+  height: 100%;
+  width: 200px;
+  padding: 8px 10px;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.main-inf {
+  height: 100%;
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+
+.user-account {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--gray-300);
+  border-radius: 7px;
+  font-size: 0.95rem;
+  background: white;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.user-account-image {
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+}
+
+/* ────────────────────────────────────────────────
+  registration
+───────────────────────────────────────────────── */
+
+
+.registration-body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   background: var(--gray-50);
   color: var(--gray-800);
@@ -32,6 +121,7 @@ body {
   font-size: 0.94rem;
   padding: 16px 10px;
 }
+
 
 .registration-container {
   max-width: 800px;
@@ -130,9 +220,6 @@ textarea:focus {
   max-height: 320px;
 }
 
-/* ────────────────────────────────────────────────
-   بخش‌های اختیاری (اضافه/حذف چندگانه)
-───────────────────────────────────────────────── */
 
 .optional-section {
   margin: 1.6rem 0;
@@ -234,9 +321,6 @@ textarea:focus {
   margin-top: 0.35rem;
 }
 
-/* ────────────────────────────────────────────────
-   Responsive
-───────────────────────────────────────────────── */
 
 @media (max-width: 580px) {
   .content {
@@ -262,11 +346,6 @@ textarea:focus {
   }
 }
 
-
-
-/* ────────────────────────────────────────────────
-  باز شدن قسمت انتخاب گزینه ها
-───────────────────────────────────────────────── */
 
 .multi-select-wrapper {
   position: relative;
@@ -369,7 +448,8 @@ input[type="checkbox"].toggle-input {
 
 .multi-select-wrapper {
   position: relative;
-  max-width: 100%;          /* یا هر مقداری که مناسب طراحی‌ات است */
+  max-width: 100%;
+  /* یا هر مقداری که مناسب طراحی‌ات است */
   font-family: system-ui, -apple-system, sans-serif;
   margin-bottom: 1.2rem;
 }
@@ -434,11 +514,11 @@ input[type="checkbox"].toggle-input {
 }
 
 /* وقتی باز است */
-.multi-select-wrapper input.toggle-input:checked ~ .options-container {
+.multi-select-wrapper input.toggle-input:checked~.options-container {
   display: block;
 }
 
-.multi-select-wrapper input.toggle-input:checked ~ .select-header .arrow {
+.multi-select-wrapper input.toggle-input:checked~.select-header .arrow {
   transform: rotate(180deg);
 }
 
