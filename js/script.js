@@ -34,38 +34,58 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
-    const checks = document.querySelectorAll('.lang-check');
-    const display = document.getElementById('selected-text');
-    const toggle = document.getElementById('toggle-languages');
+  // پیدا کردن همه multi-select wrapperها
+  const wrappers = document.querySelectorAll('.multi-select-wrapper');
+
+  wrappers.forEach(wrapper => {
+    const toggle = wrapper.querySelector('.toggle-input');
+    const display = wrapper.querySelector('span[id^="selected-"]'); // همه spanهایی که id با selected- شروع می‌شوند
+    const checks = wrapper.querySelectorAll('input[type="checkbox"]:not(.toggle-input)');
+
+    if (!toggle || !display || checks.length === 0) return;
 
     function updateDisplay() {
       const selected = Array.from(checks)
         .filter(ch => ch.checked)
-        .map(ch => ch.nextElementSibling.textContent.trim().split(' (')[0]);
+        .map(ch => {
+          const label = ch.nextElementSibling?.textContent?.trim() || '';
+          // فقط متن فارسی را نگه می‌داریم (قبل از پرانتز)
+          return label.split(' (')[0] || label;
+        })
+        .filter(Boolean);
 
       if (selected.length === 0) {
         display.textContent = 'انتخاب کنید';
       } else if (selected.length <= 3) {
         display.textContent = selected.join('، ') + ' انتخاب شد';
       } else {
-        display.textContent = selected.length + ' گزینه انتخاب شد';
+        display.textContent = `${selected.length} گزینه انتخاب شد`;
       }
     }
 
-    // به‌روزرسانی هنگام تغییر هر چک‌باکس
-    checks.forEach(ch => ch.addEventListener('change', updateDisplay));
-
-    // بستن منو با کلیک بیرون
-    document.addEventListener('click', e => {
-      if (!e.target.closest('.multi-select-wrapper')) {
-        toggle.checked = false;
-      }
+    // به‌روزرسانی هنگام تیک زدن / برداشتن
+    checks.forEach(ch => {
+      ch.addEventListener('change', updateDisplay);
     });
 
-    // جلوگیری از بسته شدن وقتی داخل منو کلیک می‌کنیم
-    document.querySelector('.multi-select-wrapper').addEventListener('click', e => {
+    // اولیه کردن وضعیت
+    updateDisplay();
+  });
+
+  // بستن همه منوها وقتی بیرون کلیک شد
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.multi-select-wrapper')) {
+      document.querySelectorAll('.toggle-input:checked').forEach(toggle => {
+        toggle.checked = false;
+      });
+    }
+  });
+
+  // جلوگیری از بسته شدن وقتی داخل wrapper کلیک می‌کنیم
+  document.querySelectorAll('.multi-select-wrapper').forEach(wrapper => {
+    wrapper.addEventListener('click', e => {
       e.stopPropagation();
     });
   });
+});
