@@ -33,7 +33,7 @@ body {
   padding: 16px 10px;
 }
 
-.container {
+.registration-container {
   max-width: 800px;
   margin: 0 auto;
   background: white;
@@ -42,25 +42,25 @@ body {
   overflow: hidden;
 }
 
-.header {
+.registration-header {
   background: var(--primary);
   color: white;
   padding: 1.5rem 1.4rem;
   text-align: center;
 }
 
-.header h1 {
+.registration-header h1 {
   font-size: 1.55rem;
   font-weight: 700;
   margin-bottom: 0.35rem;
 }
 
-.header p {
+.registration-header p {
   font-size: 0.92rem;
   opacity: 0.95;
 }
 
-.content {
+.registration-content {
   padding: 1.5rem 1.4rem 2rem;
 }
 
