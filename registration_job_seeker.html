@@ -174,57 +174,13 @@
                             </div>
                         </div>
 
-                        <div class="form-group form-group-select">
+<!--                         <div class="form-group form-group-select">
                             <label for="system-type">aaa</label>
                             <select id="system-type" name="system-type">
                                 <option value="">انتخاب کنید</option>
                                 <option value="aaa">aaa</option>
                             </select>
-                        </div>
-
-                        <div class="form-group form-group-select">
-                            <label for="system-type">aaa</label>
-                            <select id="system-type" name="system-type">
-                                <option value="">انتخاب کنید</option>
-                                <option value="aaa">aaa</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group form-group-select">
-                            <label for="system-type">aaa</label>
-                            <select id="system-type" name="system-type">
-                                <option value="">انتخاب کنید</option>
-                                <option value="aaa">aaa</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group form-group-select">
-                            <label for="system-type">aaa</label>
-                            <select id="system-type" name="system-type">
-                                <option value="">انتخاب کنید</option>
-                                <option value="aaa">aaa</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group form-group-select">
-                            <label for="system-type">aaa</label>
-                            <select id="system-type" name="system-type">
-                                <option value="">انتخاب کنید</option>
-                                <option value="aaa">aaa</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group form-group-select">
-                            <label for="system-type">aaa</label>
-                            <select id="system-type" name="system-type">
-                                <option value="">انتخاب کنید</option>
-                                <option value="aaa">aaa</option>
-                            </select>
-                        </div>
-
-
-
-
+                        </div> -->
 
 
                         <div class="form-group">
@@ -262,65 +218,511 @@
                         <div class="added-item">
                             <div class="form-row">
                                 <div class="filling-form">
-                                    <div class="form-group form-group-select">
-                                        <label for="skills">مهارت‌ها:</label>
-                                        <select id="skills" name="skills">
-                                            <option value="">انتخاب کنید</option>
-                                            <option value="programming">برنامه‌نویسی (Programming)</option>
-                                            <option value="graphic-design">طراح گرافیک (Graphic Design)</option>
-                                            <option value="project-management">مدیریت پروژه (Project Management)
-                                            </option>
-                                            <option value="digital-marketing">بازاریابی دیجیتال (Digital Marketing)
-                                            </option>
-                                            <option value="data-analysis">تحلیل داده (Data Analysis)</option>
-                                            <option value="sales">فروش (Sales)</option>
-                                            <option value="accounting">حسابداری (Accounting)</option>
-                                            <option value="software-engineering">مهندسی نرم‌افزار (Software Engineering)
-                                            </option>
-                                            <option value="seo">سئو و بهینه‌سازی (SEO)</option>
-                                            <option value="web-design">طراحی وب (Web Design)</option>
-                                            <option value="social-media-management">مدیریت شبکه‌های اجتماعی (Social
-                                                Media
-                                                Management)</option>
-                                            <option value="app-development">توسعه اپلیکیشن (App Development)</option>
-                                            <option value="rnd">تحقیق و توسعه (R&D)</option>
-                                            <option value="hr-management">مدیریت منابع انسانی (HR Management)</option>
-                                            <option value="photography">عکاسی و فیلم‌برداری (Photography/Videography)
-                                            </option>
-                                            <option value="writing">نویسندگی (Writing)</option>
-                                            <option value="translation">ترجمه (Translation)</option>
-                                            <option value="mechanical-engineering">مهندسی مکانیک (Mechanical
-                                                Engineering)
-                                            </option>
-                                            <option value="supply-chain-management">مدیریت زنجیره تأمین (Supply Chain
-                                                Management)</option>
-                                        </select>
+                                    <!-- نوع سیستم / ساختار سازمانی -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-system-type">نوع سیستم / ساختار سازمانی</label>
+                                        <input type="checkbox" id="toggle-system-type" class="toggle-input" hidden>
+                                        <label for="toggle-system-type" class="select-header">
+                                            <span id="selected-system-type">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="corporate">
+                                                <span>شرکتی (Corporate/Company)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="team-based">
+                                                <span>تیمی (Team-based)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="workshop">
+                                                <span>کارگاهی (Workshop/Factory)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="startup">
+                                                <span>استارتاپی (Startup)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="non-profit">
+                                                <span>غیرانتفاعی (Non-profit)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="freelance">
+                                                <span>فریلنسری (Freelance)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="cooperative">
+                                                <span>تعاونی (Cooperative)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="family-business">
+                                                <span>خانوادگی (Family Business)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="online-remote">
+                                                <span>آنلاین/ریموت (Online/Remote)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="project-based">
+                                                <span>پروژه‌ای (Project-based)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="partnership">
+                                                <span>مشارکتی (Partnership)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="government-linked">
+                                                <span>دولتی (Government-linked)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="private">
+                                                <span>خصوصی (Private)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="system_type[]" value="hybrid">
+                                                <span>هیبریدی (Hybrid)</span>
+                                            </label>
+                                        </div>
                                     </div>
 
-                                    <div class="form-group form-group-select">
-                                        <label for="experience-level">سطح تجربه:</label>
-                                        <select id="experience-level" name="experience-level">
-                                            <option value="">انتخاب کنید</option>
-                                            <option value="beginner">تازه‌کار (Beginner)</option>
-                                            <option value="intermediate">متوسط (Intermediate)</option>
-                                            <option value="professional">حرفه‌ای (Professional)</option>
-                                            <option value="expert">متخصص (Expert)</option>
-                                            <option value="no-experience">بدون تجربه (No Experience)</option>
-                                        </select>
+                                    <!-- اندازه تیم -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-team-size">اندازه تیم:</label>
+                                        <input type="checkbox" id="toggle-team-size" class="toggle-input" hidden>
+                                        <label for="toggle-team-size" class="select-header">
+                                            <span id="selected-team-size">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="team_size[]" value="small">
+                                                <span>کوچک (2-5 نفر) (Small: 2-5 members)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="team_size[]" value="medium">
+                                                <span>متوسط (6-10 نفر) (Medium: 6-10 members)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="team_size[]" value="large">
+                                                <span>بزرگ (بیش از 10 نفر) (Large: More than 10 members)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="team_size[]" value="solo">
+                                                <span>تک‌نفره (Solo)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="team_size[]" value="unlimited">
+                                                <span>نامحدود (Unlimited)</span>
+                                            </label>
+                                        </div>
                                     </div>
 
-                                    <div class="form-group form-group-select">
-                                        <label for="languages">زبان‌ها:</label>
-                                        <select id="languages" name="languages">
-                                            <option value="">انتخاب کنید</option>
-                                            <option value="persian">فارسی (Persian)</option>
-                                            <option value="english">انگلیسی (English)</option>
-                                            <option value="arabic">عربی (Arabic)</option>
-                                            <option value="turkish">ترکی (Turkish)</option>
-                                            <option value="french">فرانسوی (French)</option>
-                                            <option value="german">آلمانی (German)</option>
-                                            <option value="multilingual">چندزبانه (Multilingual)</option>
-                                        </select>
+                                    <!-- مدل کسب‌وکار -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-business-model">مدل کسب‌وکار:</label>
+                                        <input type="checkbox" id="toggle-business-model" class="toggle-input" hidden>
+                                        <label for="toggle-business-model" class="select-header">
+                                            <span id="selected-business-model">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="marketplace">
+                                                <span>پلتفرم / مارکت‌پلیس (Marketplace)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="saas">
+                                                <span>اشتراکی / SaaS (Subscription / Software as a Service)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="freemium">
+                                                <span>فریمیوم (Freemium)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="commission-based">
+                                                <span>کمیسیون‌محور (Commission-based)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="direct-sales">
+                                                <span>فروش مستقیم محصول (Direct Product Sales)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="service-based">
+                                                <span>خدمات آنلاین / آفلاین (Service-based)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]"
+                                                    value="content-subscription">
+                                                <span>اشتراک محتوا (Content Subscription)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="ad-based">
+                                                <span>تبلیغات و اسپانسرشیپ (Ad-based)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="sharing-economy">
+                                                <span>مدل اشتراکی تجهیزات / فضا (Sharing Economy)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="on-demand">
+                                                <span>تولید به سفارش (On-demand Production)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="business_model[]" value="crowdfunding">
+                                                <span>کراودفاندینگ / سرمایه‌گذاری جمعی (Crowdfunding)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- مرحله رشد / نوع استارتاپ -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-startup-stage">مرحله رشد / نوع استارتاپ:</label>
+                                        <input type="checkbox" id="toggle-startup-stage" class="toggle-input" hidden>
+                                        <label for="toggle-startup-stage" class="select-header">
+                                            <span id="selected-startup-stage">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="startup_stage[]" value="pre-seed">
+                                                <span>ایده اولیه / پیش‌استارتاپ (Idea / Pre-seed)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="startup_stage[]" value="mvp">
+                                                <span>MVP / محصول اولیه (MVP / Early Stage)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="startup_stage[]" value="growth">
+                                                <span>در حال رشد سریع (Growth Stage)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="startup_stage[]" value="scalable">
+                                                <span>مقیاس‌پذیر بالا (Scalable / High-growth)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="startup_stage[]" value="small-local">
+                                                <span>کسب‌وکار کوچک محلی (Small Local Business)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="startup_stage[]" value="social-impact">
+                                                <span>استارتاپ اجتماعی / تأثیرگذار (Social Impact Startup)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="startup_stage[]" value="lifestyle">
+                                                <span>استارتاپ خریدنی / کوچک (Buyable / Lifestyle Startup)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- نوع محصول / خدمت -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-product-type">نوع محصول / خدمت:</label>
+                                        <input type="checkbox" id="toggle-product-type" class="toggle-input" hidden>
+                                        <label for="toggle-product-type" class="select-header">
+                                            <span id="selected-product-type">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="mobile-app">
+                                                <span>اپلیکیشن موبایل (Mobile App)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="web-platform">
+                                                <span>وب‌سایت / پلتفرم آنلاین (Web Platform)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="hardware-software">
+                                                <span>سخت‌افزار + نرم‌افزار (Hardware + Software)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="offline-service">
+                                                <span>خدمات فیزیکی / حضوری (Offline / Physical Service)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="digital-content">
+                                                <span>محتوای دیجیتال (Digital Content)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="physical-product">
+                                                <span>محصول فیزیکی (Physical Product)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="consulting">
+                                                <span>خدمات مشاوره‌ای / منتورینگ (Consulting / Mentoring)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="ai-tools">
+                                                <span>ابزارهای هوش مصنوعی / اتوماسیون (AI Tools)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="product_type[]" value="cloud-services">
+                                                <span>خدمات ابری / کلود (Cloud Services)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- تمرکز جغرافیایی / بازار هدف -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-market-focus">تمرکز جغرافیایی / بازار هدف:</label>
+                                        <input type="checkbox" id="toggle-market-focus" class="toggle-input" hidden>
+                                        <label for="toggle-market-focus" class="select-header">
+                                            <span id="selected-market-focus">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="market_focus[]" value="local">
+                                                <span>محلی / شهری (Local / City-based)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="market_focus[]" value="provincial">
+                                                <span>استانی / منطقه‌ای (Provincial)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="market_focus[]" value="national">
+                                                <span>سراسری ایران (National)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="market_focus[]" value="diaspora">
+                                                <span>فارسی‌زبانان خارج از کشور (Persian-speaking Diaspora)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="market_focus[]" value="export">
+                                                <span>صادرات‌محور (Export-oriented)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="market_focus[]" value="global">
+                                                <span>بین‌المللی (Global)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- نیاز / مشکل حل‌شده -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-problem-solved">نیاز / مشکل حل‌شده:</label>
+                                        <input type="checkbox" id="toggle-problem-solved" class="toggle-input" hidden>
+                                        <label for="toggle-problem-solved" class="select-header">
+                                            <span id="selected-problem-solved">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]" value="time-saving">
+                                                <span>صرفه‌جویی در زمان (Time-saving)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]" value="cost-reduction">
+                                                <span>کاهش هزینه (Cost Reduction)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]" value="accessibility">
+                                                <span>دسترسی آسان‌تر (Accessibility)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]" value="quality-of-life">
+                                                <span>بهبود کیفیت زندگی (Quality of Life)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]" value="environmental">
+                                                <span>حل مشکل زیست‌محیطی (Environmental Solution)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]" value="side-income">
+                                                <span>ایجاد درآمد جانبی (Side Income)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]"
+                                                    value="skill-development">
+                                                <span>آموزش و مهارت‌افزایی (Skill Development)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]" value="health-wellness">
+                                                <span>سلامت جسمی / روانی (Health & Wellness)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="problem_solved[]" value="security-trust">
+                                                <span>امنیت و اعتماد (Security & Trust)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- نوآوری / فناوری اصلی -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-core-technology">نوآوری / فناوری اصلی:</label>
+                                        <input type="checkbox" id="toggle-core-technology" class="toggle-input" hidden>
+                                        <label for="toggle-core-technology" class="select-header">
+                                            <span id="selected-core-technology">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="core_technology[]" value="ai-ml">
+                                                <span>هوش مصنوعی و یادگیری ماشین (AI / ML)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="core_technology[]" value="blockchain">
+                                                <span>بلاکچین و کریپتو (Blockchain / Crypto)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="core_technology[]" value="iot">
+                                                <span>اینترنت اشیاء (IoT)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="core_technology[]" value="ar-vr">
+                                                <span>واقعیت افزوده / مجازی (AR / VR)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="core_technology[]" value="big-data">
+                                                <span>بیگ‌دیتا و آنالیتیکس (Big Data & Analytics)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="core_technology[]" value="non-tech">
+                                                <span>بدون فناوری پیشرفته (Non-tech / Traditional)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="core_technology[]" value="robotics">
+                                                <span>رباتیک و اتوماسیون (Robotics)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- نوع قرارداد -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-contract-type">نوع قرارداد:</label>
+                                        <input type="checkbox" id="toggle-contract-type" class="toggle-input" hidden>
+                                        <label for="toggle-contract-type" class="select-header">
+                                            <span id="selected-contract-type">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="contract_type[]" value="full-time">
+                                                <span>تمام‌وقت (Full-time)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="contract_type[]" value="part-time">
+                                                <span>پاره‌وقت (Part-time)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="contract_type[]" value="contractual">
+                                                <span>قراردادی (Contractual)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="contract_type[]" value="freelance">
+                                                <span>فریلنس (Freelance)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="contract_type[]" value="partnership">
+                                                <span>مشارکتی (Partnership)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="contract_type[]" value="probationary">
+                                                <span>آزمایشی (Probationary)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="contract_type[]" value="permanent">
+                                                <span>دائمی (Permanent)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- دسته‌بندی اصلی صنایع / حوزه‌های فعالیت -->
+                                    <div class="multi-select-wrapper form-group form-group-select">
+                                        <label for="toggle-main-industry">دسته‌بندی اصلی صنایع / حوزه‌های
+                                            فعالیت:</label>
+                                        <input type="checkbox" id="toggle-main-industry" class="toggle-input" hidden>
+                                        <label for="toggle-main-industry" class="select-header">
+                                            <span id="selected-main-industry">انتخاب کنید</span>
+                                            <span class="arrow">▼</span>
+                                        </label>
+                                        <div class="options-container">
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="it-software">
+                                                <span>فناوری اطلاعات و نرم‌افزار (IT & Software)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="e-commerce">
+                                                <span>تجارت الکترونیک و فروشگاه آنلاین (E-commerce)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="fintech">
+                                                <span>فین‌تک و خدمات مالی (FinTech & Financial Services)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="healthtech">
+                                                <span>سلامت، پزشکی و بهداشت (HealthTech & Medical)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="edtech">
+                                                <span>آموزش و یادگیری آنلاین (EdTech)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="foodtech">
+                                                <span>غذا، رستوران و تحویل (FoodTech & Delivery)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="mobility">
+                                                <span>حمل‌ونقل و لجستیک (Mobility & Logistics)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="agritech">
+                                                <span>کشاورزی و دامداری هوشمند (AgriTech)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="cleantech">
+                                                <span>انرژی، محیط زیست و پایداری (CleanTech & Sustainability)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="tourism">
+                                                <span>گردشگری و سفر (Tourism & Travel)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="real-estate">
+                                                <span>املاک و مستغلات (Real Estate & PropTech)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="manufacturing">
+                                                <span>تولید و صنایع دستی (Manufacturing & Handicrafts)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="media">
+                                                <span>رسانه، محتوا و سرگرمی (Media, Content & Entertainment)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="beauty">
+                                                <span>زیبایی، آرایش و مراقبت شخصی (Beauty & Personal Care)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="sports">
+                                                <span>ورزش، تناسب اندام و سبک زندگی (Sports & Fitness)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="automotive">
+                                                <span>خودرو و قطعات یدکی (Automotive)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="construction">
+                                                <span>ساخت‌وساز و تجهیزات ساختمانی (Construction & Building)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="fashion">
+                                                <span>نساجی، مد و پوشاک (Fashion & Textile)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="petrochemical">
+                                                <span>پتروشیمی، شیمیایی و مواد اولیه (Petrochemical & Chemicals)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="metals">
+                                                <span>فلزات، معدن و فولاد (Metals, Mining & Steel)</span>
+                                            </label>
+                                            <label class="option">
+                                                <input type="checkbox" name="main_industry[]" value="vocational">
+                                                <span>آموزش و پرورش غیررسمی / مهارتی (Vocational Training)</span>
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <div class="form-group form-group-select">
