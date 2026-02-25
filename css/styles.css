@@ -72,7 +72,7 @@
 
 .main-sidebar {
   height: 100%;
-  width: 200px;
+  width: 300px;
   padding: 8px 10px;
   background: var(--gray-100);
   border: 1px solid var(--gray-200);
@@ -92,6 +92,7 @@
 
 
 .user-account {
+  display: flex;
   width: 100%;
   padding: 6px 8px;
   border: 1px solid var(--gray-300);
@@ -107,6 +108,73 @@
   width: 30px;
   height: 30px;
 }
+
+.user-account-inf {
+  margin: auto;
+  margin-right: 3px;
+}
+
+.user-account-more {
+  margin: auto 0;
+}
+
+
+.serch-all {
+  display: flex;
+  width: 71%;
+  height: 40px;
+  margin: 0 auto;
+  padding: 6px 8px;
+  border: 1px solid var(--gray-300);
+  border-radius: 7px;
+  font-size: 0.95rem;
+  background: white;
+}
+
+.option-serch-all {
+  display: flex;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 6px 8px;
+  /*   border: 1px solid var(--gray-300);
+  border-radius: 7px; */
+  font-size: 0.95rem;
+}
+
+.option-serch-all-registration {
+  display: flex;
+  margin: auto 10px;
+  border: 1px solid var(--gray-300);
+  border-radius: 5px;
+  padding: 5px;
+  height: 50px;
+}
+
+.option-serch-all-registration-p {
+  font-size: 12px;
+  margin: auto;
+  padding: 0 3px;
+}
+
+.option-serch-all-registration-select {
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  background: white;
+  width: 17px;
+  height: 17px;
+  margin: auto;
+}
+
+.option-serch-all-registration-select-div-city {
+  margin: auto;
+}
+
+.option-serch-all-registration-select-city {
+  width: 150px;
+  padding: 5px;
+}
+
 
 /* ────────────────────────────────────────────────
   registration
