@@ -89,3 +89,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const mainCheckbox = document.querySelector('.option-serch-all-registration-select');
+    const section = document.querySelector('.team-and-market-section');
+
+    if (!mainCheckbox || !section) return;
+
+    // تابع تغییر وضعیت نمایش
+    function toggleSections() {
+        if (mainCheckbox.checked) {
+            section.style.display = 'block';   // یا 'flex' یا هر مقداری که layout شما نیاز دارد
+        } else {
+            section.style.display = 'none';
+            
+            // اختیاری: وقتی مخفی شد، همه انتخاب‌ها را پاک کنیم
+            // document.querySelectorAll('input[name="team_size[]"]').forEach(el => el.checked = false);
+            // document.querySelectorAll('input[name="market_focus[]"]').forEach(el => el.checked = false);
+        }
+    }
+
+    // اجرا هنگام تغییر وضعیت چک‌باکس
+    mainCheckbox.addEventListener('change', toggleSections);
+
+    // برای اطمینان از وضعیت اولیه (اگر صفحه رفرش شد و تیک داشت)
+    toggleSections();
+});

@@ -38,10 +38,38 @@
             <div class="main-inf">
 
                 <div class="option-serch-all">
+
                     <div class="option-serch-all-registration">
                         <p class="option-serch-all-registration-p">صاحبان کار و ایده</p>
                         <input type="checkbox" class="option-serch-all-registration-select" value="">
+
+
+                        <div class="team-and-market-section" style="display: none;">
+                            <!-- اندازه تیم -->
+                            <div class="multi-select-wrapper form-group form-group-select">
+                                <label for="toggle-team-size">اندازه تیم:</label>
+                                <input type="checkbox" id="toggle-team-size" class="toggle-input" hidden>
+                                <label for="toggle-team-size" class="select-header">
+                                    <span id="selected-team-size">انتخاب کنید</span>
+                                    <span class="arrow">▼</span>
+                                </label>
+                                <div class="options-container">
+                                    <label class="option">
+                                        <input type="checkbox" name="team_size[]" value="small">
+                                        <span>کوچک (2-5 نفر) (Small: 2-5 members)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="checkbox" name="team_size[]" value="medium">
+                                        <span>متوسط (6-10 نفر) (Medium: 6-10 members)</span>
+                                    </label>
+                                    <!-- بقیه گزینه‌ها ... -->
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
+
                     <div class="option-serch-all-registration">
                         <p class="option-serch-all-registration-p">جویندگان کار</p>
                         <input type="checkbox" class="option-serch-all-registration-select" value="">
