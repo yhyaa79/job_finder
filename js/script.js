@@ -94,29 +94,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
 
-    const mainCheckbox = document.querySelector('.option-serch-all-registration-select');
-    const section = document.querySelector('.team-and-market-section');
+    // همه checkboxهای اصلی را پیدا کن
+    const mainCheckboxes = document.querySelectorAll('.option-serch-all-registration-select');
 
-    if (!mainCheckbox || !section) return;
+    mainCheckboxes.forEach(checkbox => {
 
-    // تابع تغییر وضعیت نمایش
-    function toggleSections() {
-        if (mainCheckbox.checked) {
-            section.style.display = 'block';   // یا 'flex' یا هر مقداری که layout شما نیاز دارد
-        } else {
-            section.style.display = 'none';
-            
-            // اختیاری: وقتی مخفی شد، همه انتخاب‌ها را پاک کنیم
-            // document.querySelectorAll('input[name="team_size[]"]').forEach(el => el.checked = false);
-            // document.querySelectorAll('input[name="market_focus[]"]').forEach(el => el.checked = false);
-        }
-    }
+        // نزدیک‌ترین .team-and-market-section را نسبت به همین checkbox پیدا کن
+        const section = checkbox.closest('.option-serch-all-registration')
+                               ?.querySelector('.team-and-market-section');
 
-    // اجرا هنگام تغییر وضعیت چک‌باکس
-    mainCheckbox.addEventListener('change', toggleSections);
+        if (!section) return;
 
-    // برای اطمینان از وضعیت اولیه (اگر صفحه رفرش شد و تیک داشت)
-    toggleSections();
+        const toggleVisibility = () => {
+            section.style.display = checkbox.checked ? 'block' : 'none';
+        };
+
+        // هنگام تغییر وضعیت checkbox
+        checkbox.addEventListener('change', toggleVisibility);
+
+        // وضعیت اولیه صفحه (ممکن است با refresh تیک داشته باشد)
+        toggleVisibility();
+    });
+
 });
