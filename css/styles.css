@@ -88,6 +88,7 @@
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   text-align: center;
+  overflow: auto;
 }
 
 
@@ -120,33 +121,24 @@
 
 
 .main-inf-web {
-
+padding: 5px;
 }
 
 .main-inf-logo {
   display: inline-flex;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border: 1px solid var(--gray-300);
   border-radius: 7px;
   background: white;
 }
 
 .main-inf-name-web {
+  margin-top: 20px;
+  margin-bottom: 30px;
   
 }
 
-.main-inf-name-web-h2 {
-  
-}
-
-.main-inf-name-web-h4 {
-  
-}
-
-.main {
-  
-}
 
 .option-serch-all {
   display: flex;
